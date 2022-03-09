@@ -2,15 +2,15 @@
 # Website: www.williamlam.com
 
 # vCenter Server used to deploy vSphere with Kubernetes Lab
-$VIServer = "mgmt-vcsa-01.cpbu.corp"
-$VIUsername = "administrator@vsphere.local"
-$VIPassword = "VMware1!"
+$VIServer = "pesxi-02.sil.net"
+$VIUsername = "root"
+$VIPassword = "&UJM^YHN7ujm6yhn"
 
 # Full Path to both the Nested ESXi 7.0 VA, Extracted VCSA 7.0 ISO & NSX-T OVAs
-$NestedESXiApplianceOVA = "C:\Users\william\Desktop\Tanzu\Nested_ESXi7.0u1_Appliance_Template_v1.ova"
-$VCSAInstallerPath = "C:\Users\william\Desktop\Tanzu\VMware-VCSA-all-7.0.1-16860138"
-$NSXTManagerOVA = "C:\Users\william\Desktop\Tanzu\nsx-unified-appliance-3.1.1.0.0.17483186.ova"
-$NSXTEdgeOVA = "C:\Users\william\Desktop\Tanzu\nsx-edge-3.1.1.0.0.17483065.ova"
+$NestedESXiApplianceOVA = ".\tanzu\Nested_ESXi7.0u1_Appliance_Template_v1.ova"
+$VCSAInstallerPath = ".\tanzu\VMware-VCSA-all-7.0.1-17491101"
+$NSXTManagerOVA = ".\tanzu\nsx-unified-appliance-3.1.1.0.0.17483186.ova"
+$NSXTEdgeOVA = ".\tanzu\nsx-edge-3.1.1.0.0.17483065.ova"
 
 # TKG Content Library URL
 $TKGContentLibraryName = "TKG-Content-Library"
@@ -18,9 +18,10 @@ $TKGContentLibraryURL = "https://wp-content.vmware.com/v2/latest/lib.json"
 
 # Nested ESXi VMs to deploy
 $NestedESXiHostnameToIPs = @{
-    "tanzu-esxi-7" = "172.17.31.113"
-    "tanzu-esxi-8" = "172.17.31.114"
-    "tanzu-esxi-9" = "172.17.31.115"
+    "vesxi70-01.lab01.vlab.net" = "192.168.50.21"
+    "vesxi70-02.lab01.vlab.net" = "192.168.50.22"
+    "vesxi70-03.lab01.vlab.net" = "192.168.50.23"
+    "vesxi70-04.lab01.vlab.net" = "192.168.50.24"
 }
 
 # Nested ESXi VM Resources
@@ -31,9 +32,9 @@ $NestedESXiCapacityvDisk = "100" #GB
 
 # VCSA Deployment Configuration
 $VCSADeploymentSize = "tiny"
-$VCSADisplayName = "tanzu-vcsa-3"
-$VCSAIPAddress = "172.17.31.112"
-$VCSAHostname = "tanzu-vcsa-3.cpbu.corp" #Change to IP if you don't have valid DNS
+$VCSADisplayName = "vc01-lab01-vlab-net"
+$VCSAIPAddress = "192.168.50.20"
+$VCSAHostname = "vc01.lab01.vlab.net" #Change to IP if you don't have valid DNS
 $VCSAPrefix = "24"
 $VCSASSODomainName = "vsphere.local"
 $VCSASSOPassword = "VMware1!"
@@ -41,16 +42,16 @@ $VCSARootPassword = "VMware1!"
 $VCSASSHEnable = "true"
 
 # General Deployment Configuration for Nested ESXi, VCSA & NSX VMs
-$VMDatacenter = "San Jose"
+$VMDatacenter = "Tanzu"
 $VMCluster = "Cluster-01"
-$VMNetwork = "SJC-CORP-MGMT"
+$VMNetwork = "tzu-mgmt"
 $VMDatastore = "vsanDatastore"
 $VMNetmask = "255.255.255.0"
-$VMGateway = "172.17.31.253"
-$VMDNS = "172.17.31.5"
+$VMGateway = "192.168.50.1"
+$VMDNS = "10.1.1.2"
 $VMNTP = "pool.ntp.org"
 $VMPassword = "VMware1!"
-$VMDomain = "cpbu.corp"
+$VMDomain = "lab01.vlab.net"
 $VMSyslog = "172.17.31.112"
 $VMFolder = "Tanzu"
 # Applicable to Nested ESXi only
@@ -71,7 +72,7 @@ $DevOpsUsername = "devops"
 $DevOpsPassword = "VMware1!"
 
 # NSX-T Configuration
-$NSXLicenseKey = ""
+$NSXLicenseKey = "NH4AH-0LL4L-F8P8X-09206-05HJM"
 $NSXRootPassword = "VMware1!VMware1!"
 $NSXAdminUsername = "admin"
 $NSXAdminPassword = "VMware1!VMware1!"
@@ -133,15 +134,15 @@ $NSXTMgrDeploymentSize = "small"
 $NSXTMgrvCPU = "6" #override default size
 $NSXTMgrvMEM = "24" #override default size
 $NSXTMgrDisplayName = "tanzu-nsx-3"
-$NSXTMgrHostname = "tanzu-nsx-3.cpbu.corp"
-$NSXTMgrIPAddress = "172.17.31.118"
+$NSXTMgrHostname = "nsxmgr01.lab01.vlab.net"
+$NSXTMgrIPAddress = "192.168.50.26"
 
 # NSX-T Edge Configuration
 $NSXTEdgeDeploymentSize = "medium"
 $NSXTEdgevCPU = "8" #override default size
 $NSXTEdgevMEM = "32" #override default size
 $NSXTEdgeHostnameToIPs = @{
-    "tanzu-nsx-edge-3a" = "172.17.31.116"
+    "tanzu-nsx-edge-01" = "192.168.50.27"
 }
 
 # Advanced Configurations
@@ -149,6 +150,8 @@ $NSXTEdgeHostnameToIPs = @{
 $addHostByDnsName = 1
 
 #### DO NOT EDIT BEYOND HERE ####
+
+Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
 
 $debug = $true
 $verboseLogFile = "vsphere-with-tanzu-nsxt-lab-deployment.log"

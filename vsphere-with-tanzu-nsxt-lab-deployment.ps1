@@ -2,9 +2,9 @@
 # Website: www.williamlam.com
 
 # vCenter Server used to deploy vSphere with Kubernetes Lab
-$VIServer = "pesxi-02.sil.net"
-$VIUsername = "root"
-$VIPassword = "&UJM^YHN7ujm6yhn"
+$VIServer = "vc01.lab01.vlab.net"
+$VIUsername = "administrator@vsphere.local"
+$VIPassword = "VMware1!"
 
 # Full Path to both the Nested ESXi 7.0 VA, Extracted VCSA 7.0 ISO & NSX-T OVAs
 $NestedESXiApplianceOVA = ".\tanzu\Nested_ESXi7.0u1_Appliance_Template_v1.ova"
@@ -27,8 +27,8 @@ $NestedESXiHostnameToIPs = @{
 # Nested ESXi VM Resources
 $NestedESXivCPU = "4"
 $NestedESXivMEM = "24" #GB
-$NestedESXiCachingvDisk = "8" #GB
-$NestedESXiCapacityvDisk = "100" #GB
+$NestedESXiCachingvDisk = "16" #GB
+$NestedESXiCapacityvDisk = "150" #GB
 
 # VCSA Deployment Configuration
 $VCSADeploymentSize = "tiny"
@@ -42,10 +42,10 @@ $VCSARootPassword = "VMware1!"
 $VCSASSHEnable = "true"
 
 # General Deployment Configuration for Nested ESXi, VCSA & NSX VMs
-$VMDatacenter = "Tanzu"
-$VMCluster = "Cluster-01"
-$VMNetwork = "tzu-mgmt"
-$VMDatastore = "vsanDatastore"
+$VMDatacenter = "sil.net"
+$VMCluster = "pesxi"
+$VMNetwork = "vlab-mgmt"
+$VMDatastore = "nfs-ds-syn-01"
 $VMNetmask = "255.255.255.0"
 $VMGateway = "192.168.50.1"
 $VMDNS = "10.1.1.2"
@@ -80,7 +80,7 @@ $NSXAuditUsername = "audit"
 $NSXAuditPassword = "VMware1!VMware1!"
 $NSXSSHEnable = "true"
 $NSXEnableRootLogin = "true"
-$NSXVTEPNetwork = "Tanzu-VTEP" # This portgroup needs be created before running script
+$NSXVTEPNetwork = "tanzu-vtep" # This portgroup needs be created before running script (case sensitive)
 
 # Transport Node Profile
 $TransportNodeProfileName = "Tanzu-Host-Transport-Node-Profile"
@@ -105,11 +105,11 @@ $NetworkSegmentVlan = "0"
 
 # T0 Gateway
 $T0GatewayName = "Tanzu-T0-Gateway"
-$T0GatewayInterfaceAddress = "172.17.31.119" # should be a routable address
+$T0GatewayInterfaceAddress = "192.168.50.5" # should be a routable address
 $T0GatewayInterfacePrefix = "24"
 $T0GatewayInterfaceStaticRouteName = "Tanzu-Static-Route"
 $T0GatewayInterfaceStaticRouteNetwork = "0.0.0.0/0"
-$T0GatewayInterfaceStaticRouteAddress = "172.17.31.253"
+$T0GatewayInterfaceStaticRouteAddress = "192.168.50.1"
 
 # Uplink Profiles
 $ESXiUplinkProfileName = "ESXi-Host-Uplink-Profile"
@@ -133,7 +133,7 @@ $EdgeClusterName = "Edge-Cluster-01"
 $NSXTMgrDeploymentSize = "small"
 $NSXTMgrvCPU = "6" #override default size
 $NSXTMgrvMEM = "24" #override default size
-$NSXTMgrDisplayName = "tanzu-nsx-3"
+$NSXTMgrDisplayName = "nsxmgr3-01"
 $NSXTMgrHostname = "nsxmgr01.lab01.vlab.net"
 $NSXTMgrIPAddress = "192.168.50.26"
 
@@ -145,35 +145,58 @@ $NSXTEdgeHostnameToIPs = @{
     "tanzu-nsx-edge-01" = "192.168.50.27"
 }
 
+# Workload Management Configuration
+$ClusterName = $NewVCVSANClusterName
+$ContentLibrary = $TKGContentLibraryName
+$EphemeralDiskStoragePolicy = $StoragePolicyName
+$WorkloadNetworkEgressCIDR = "192.168.50.160/27"
+$WorkloadNetworkIngressCIDR = "192.168.50.140/27"
+$ImageCacheStoragePolicy = $StoragePolicyName
+$ManagementNetworkMode = "StaticRange"
+$MgmtNetwork = $NewVCDVPGName
+$DistributedSwitch = $NewVCVDSName
+$ControlPlaneStoragePolicy = $StoragePolicyName
+$PodCIDRs = "10.244.0.0/21"
+$ServiceCIDR = "10.96.0.0/24"
+$ControlPlaneSize = "Tiny"
+$MgmtNetworkGateway = "192.168.50.1"
+$MgmtNetworkStartIPAddress = "192.168.50.100" # 5 IPs are used by default
+$MgmtNetworkSubnet = "255.255.255.0"
+$MasterDnsSearchDomain = "lab01.vlab.net"
+$MgmtNetworkNTP = "198.27.76.102" # Has to be IP Address (FQDN NTP not supported with Workload Management at this time)
+$WorkloadNetworkEdgeCluster = $EdgeClusterName
+$WorkerDNS = "10.1.1.2"
+
+
 # Advanced Configurations
 # Set to 1 only if you have DNS (forward/reverse) for ESXi hostnames
 $addHostByDnsName = 1
 
 #### DO NOT EDIT BEYOND HERE ####
 
-Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
+Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false | Out-Null
 
 $debug = $true
 $verboseLogFile = "vsphere-with-tanzu-nsxt-lab-deployment.log"
 $random_string = -join ((65..90) + (97..122) | Get-Random -Count 8 | % {[char]$_})
 $VAppName = "Nested-vSphere-with-Tanzu-NSX-T-Lab-$random_string"
 
-$preCheck = 1
-$confirmDeployment = 1
-$deployNestedESXiVMs = 1
-$deployVCSA = 1
-$setupNewVC = 1
-$addESXiHostsToVC = 1
-$configureVSANDiskGroup = 1
-$configureVDS = 1
-$clearVSANHealthCheckAlarm = 1
-$setupTanzuStoragePolicy = 1
-$setupTKGContentLibrary = 1
-$deployNSXManager = 1
-$deployNSXEdge = 1
-$postDeployNSXConfig = 1
+$preCheck = 0
+$confirmDeployment = 0
+$deployNestedESXiVMs = 0
+$deployVCSA = 0
+$setupNewVC = 0
+$addESXiHostsToVC = 0
+$configureVSANDiskGroup = 0
+$configureVDS = 0
+$clearVSANHealthCheckAlarm = 0
+$setupTanzuStoragePolicy = 0
+$setupTKGContentLibrary = 0
+$deployNSXManager = 0
+$deployNSXEdge = 0
+$postDeployNSXConfig = 0
 $setupTanzu = 1
-$moveVMsIntovApp = 1
+$moveVMsIntovApp = 0
 
 $vcsaSize2MemoryStorageMap = @{
 "tiny"=@{"cpu"="2";"mem"="12";"disk"="415"};
@@ -1286,7 +1309,7 @@ if($postDeployNSXConfig -eq 1) {
         $transportNodeStateService = Get-NsxtService -Name "com.vmware.nsx.transport_nodes.state"
 
         # Retrieve all Edge Host Nodes
-        $edgeNodes = $transportNodeService.list().results | where {$_.node_deployment_info.resource_type -eq "EdgeNode"}
+        $edgeNodes = $transportNodeService.list().results | Where-Object {$_.node_deployment_info.resource_type -eq "EdgeNode"}
         $ipPool = (Get-NsxtService -Name "com.vmware.nsx.pools.ip_pools").list().results | where { $_.display_name -eq $TunnelEndpointName }
         $OverlayTZ = (Get-NsxtService -Name "com.vmware.nsx.transport_zones").list().results | where { $_.display_name -eq $OverlayTransportZoneName }
         $VlanTZ = (Get-NsxtService -Name "com.vmware.nsx.transport_zones").list().results | where { $_.display_name -eq $VlanTransportZoneName }
@@ -1386,7 +1409,7 @@ if($postDeployNSXConfig -eq 1) {
     }
 
     if($runAddEdgeCluster) {
-        $edgeNodes = (Get-NsxtService -Name "com.vmware.nsx.fabric.nodes").list().results | where { $_.resource_type -eq "EdgeNode" }
+        $edgeNodes = (Get-NsxtService -Name "com.vmware.nsx.fabric.nodes").list().results | Where-Object { $_.resource_type -eq "EdgeNode" }
         $edgeClusterService = Get-NsxtService -Name "com.vmware.nsx.edge_clusters"
         $edgeClusterStateService = Get-NsxtService -Name "com.vmware.nsx.edge_clusters.state"
         $edgeNodeMembersSpec = $edgeClusterService.help.create.edge_cluster.members.Create()
@@ -1430,7 +1453,7 @@ if($postDeployNSXConfig -eq 1) {
         $transportZonePolicyService = Get-NsxtPolicyService -Name "com.vmware.nsx_policy.infra.sites.enforcement_points.transport_zones"
         $segmentPolicyService = Get-NsxtPolicyService -Name "com.vmware.nsx_policy.infra.segments"
 
-        $tzPath = ($transportZonePolicyService.list("default","default").results | where {$_.display_name -eq $VlanTransportZoneName}).path
+        $tzPath = ($transportZonePolicyService.list("default","default").results | Where-Object {$_.display_name -eq $VlanTransportZoneName}).path
 
         $segmentSpec = $segmentPolicyService.help.update.segment.Create()
         $segmentSpec.transport_zone_path = $tzPath
@@ -1533,8 +1556,43 @@ if($setupTanzu -eq 1) {
     $devopsUserCreationCmd = "/usr/lib/vmware-vmafd/bin/dir-cli user create --account $DevOpsUsername --first-name `"Dev`" --last-name `"Ops`" --user-password `'$DevOpsPassword`' --login `'administrator@$VCSASSODomainName`' --password `'$VCSASSOPassword`'"
     Invoke-VMScript -ScriptText $devopsUserCreationCmd -vm (Get-VM -Name $VCSADisplayName) -GuestUser "root" -GuestPassword "$VCSARootPassword" | Out-File -Append -LiteralPath $verboseLogFile
 
+    My-Logger "Connecting to NSX-T Manager to get NSX Edge Cluster ID ..."
+    if(!(Connect-NsxtServer -Server $NSXTMgrHostname -Username $NSXAdminUsername -Password $NSXAdminPassword -WarningAction SilentlyContinue)) {
+        Write-Host -ForegroundColor Red "Unable to connect to NSX-T Manager, please check the deployment"
+        exit
+    } else {
+        My-Logger "Successfully logged into NSX-T Manager $NSXTMgrHostname  ..."
+        $nsxtedgecluster = (Get-NsxtService -Name "com.vmware.nsx.edge_clusters").list().results | Where-Object {$_.resource_type -eq "EdgeCluster"}
+    }
+
+    My-Logger "Enabling Workload Management ..."
+    $workloadManagementParameters = @{
+        Cluster = $ClusterName;
+        ContentLibrary = $ContentLibrary;
+        EphemeralStoragePolicy = $EphemeralDiskStoragePolicy;
+        ExternalEgressCIDRs = $WorkloadNetworkEgressCIDR;
+        ExternalIngressCIDRs = $WorkloadNetworkIngressCIDR;
+        ImageStoragePolicy = $ImageCacheStoragePolicy;
+        ManagementNetworkMode = $ManagementNetworkMode;
+        ManagementVirtualNetwork = (Get-VirtualNetwork $MgmtNetwork);
+        DistributedSwitch = (Get-VDSwitch $DistributedSwitch);
+        MasterStoragePolicy = $ControlPlaneStoragePolicy;
+        PodCIDRs = $PodCIDRs;
+        ServiceCIDR = $ServiceCIDR;
+        SizeHint = $ControlPlaneSize;
+        ManagementNetworkGateway = $MgmtNetworkGateway;
+        ManagementNetworkStartIPAddress = $MgmtNetworkStartIPAddress;
+        ManagementNetworkSubnetMask = $MgmtNetworkSubnet;
+        MasterDNSServerIPAddress = $WorkerDNS;
+        MasterDnsSearchDomain = $MasterDnsSearchDomain;
+        MasterNtpServer = $MgmtNetworkNTP;
+        NsxEdgeClusterId = $nsxtedgecluster.id;
+        WorkerDnsServer = $WorkerDNS;
+    }
+    Enable-WMCluster @workloadManagementParameters
+
     My-Logger "Disconnecting from Management vCenter ..."
-    Disconnect-VIServer * -Confirm:$false | Out-Null
+    #Disconnect-VIServer * -Confirm:$false | Out-Null
 }
 
 $EndTime = Get-Date

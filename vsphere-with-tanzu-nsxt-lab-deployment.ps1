@@ -164,7 +164,6 @@ $MgmtNetworkStartIPAddress = "192.168.50.100" # 5 IPs are used by default
 $MgmtNetworkSubnet = "255.255.255.0"
 $MasterDnsSearchDomain = "lab01.vlab.net"
 $MgmtNetworkNTP = "198.27.76.102" # Has to be IP Address (FQDN NTP not supported with Workload Management at this time)
-$WorkloadNetworkEdgeCluster = $EdgeClusterName
 $WorkerDNS = "10.1.1.2"
 
 
@@ -181,7 +180,7 @@ $verboseLogFile = "vsphere-with-tanzu-nsxt-lab-deployment.log"
 $random_string = -join ((65..90) + (97..122) | Get-Random -Count 8 | % {[char]$_})
 $VAppName = "Nested-vSphere-with-Tanzu-NSX-T-Lab-$random_string"
 
-$preCheck = 0
+$preCheck = 1
 $confirmDeployment = 1
 $deployNestedESXiVMs = 1
 $deployVCSA = 1
@@ -1549,8 +1548,9 @@ if($postDeployNSXConfig -eq 1) {
 }
 
 if($setupTanzu -eq 1) {
-    My-Logger "Connecting to Management vCenter Server $VIServer for enabling Tanzu ..."
-    Connect-VIServer $VIServer -User $VIUsername -Password $VIPassword -WarningAction SilentlyContinue | Out-Null
+    My-Logger "Connecting to vCenter Server $VCSAHostname for enabling Tanzu ..."
+    #Connect-VIServer $VIServer -User $VIUsername -Password $VIPassword -WarningAction SilentlyContinue | Out-Null
+    $vc = Connect-VIServer $VCSAIPAddress -User "administrator@$VCSASSODomainName" -Password $VCSASSOPassword -WarningAction SilentlyContinue
 
     My-Logger "Creating local $DevOpsUsername User in vCenter Server ..."
     $devopsUserCreationCmd = "/usr/lib/vmware-vmafd/bin/dir-cli user create --account $DevOpsUsername --first-name `"Dev`" --last-name `"Ops`" --user-password `'$DevOpsPassword`' --login `'administrator@$VCSASSODomainName`' --password `'$VCSASSOPassword`'"
@@ -1593,6 +1593,9 @@ if($setupTanzu -eq 1) {
 
     My-Logger "Disconnecting from Management vCenter ..."
     Disconnect-VIServer * -Confirm:$false | Out-Null
+
+    My-Logger "Disconnecting from NSX-T Manager ..."
+    Disconnect-NsxtServer * -Confirm:$false | Out-Null
 }
 
 $EndTime = Get-Date

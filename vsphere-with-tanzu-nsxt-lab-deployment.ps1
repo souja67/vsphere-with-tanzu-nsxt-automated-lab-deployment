@@ -1548,10 +1548,9 @@ if($postDeployNSXConfig -eq 1) {
 }
 
 if($setupTanzu -eq 1) {
-    My-Logger "Connecting to vCenter Server $VCSAHostname for enabling Tanzu ..."
-    #Connect-VIServer $VIServer -User $VIUsername -Password $VIPassword -WarningAction SilentlyContinue | Out-Null
-    $vc = Connect-VIServer $VCSAIPAddress -User "administrator@$VCSASSODomainName" -Password $VCSASSOPassword -WarningAction SilentlyContinue
-
+    My-Logger "Connecting to Management vCenter Server $VIServer to Create Devops User ..."
+    Connect-VIServer $VIServer -User $VIUsername -Password $VIPassword -WarningAction SilentlyContinue | Out-Null
+    
     My-Logger "Creating local $DevOpsUsername User in vCenter Server ..."
     $devopsUserCreationCmd = "/usr/lib/vmware-vmafd/bin/dir-cli user create --account $DevOpsUsername --first-name `"Dev`" --last-name `"Ops`" --user-password `'$DevOpsPassword`' --login `'administrator@$VCSASSODomainName`' --password `'$VCSASSOPassword`'"
     Invoke-VMScript -ScriptText $devopsUserCreationCmd -vm (Get-VM -Name $VCSADisplayName) -GuestUser "root" -GuestPassword "$VCSARootPassword" | Out-File -Append -LiteralPath $verboseLogFile
@@ -1565,7 +1564,12 @@ if($setupTanzu -eq 1) {
         $nsxtedgecluster = (Get-NsxtService -Name "com.vmware.nsx.edge_clusters").list().results | Where-Object {$_.resource_type -eq "EdgeCluster"}
     }
 
-    My-Logger "Enabling Workload Management ..."
+    My-Logger "Disconnecting from Management vCenter ..."
+    Disconnect-VIServer * -Confirm:$false | Out-Null
+
+    My-Logger "Connecting to $VCSAHostname to Enable Workload Management"
+    $vc = Connect-VIServer $VCSAIPAddress -User "administrator@$VCSASSODomainName" -Password $VCSASSOPassword -WarningAction SilentlyContinue
+
     $workloadManagementParameters = @{
         Cluster = $ClusterName;
         ContentLibrary = $ContentLibrary;
@@ -1591,11 +1595,11 @@ if($setupTanzu -eq 1) {
     }
     Enable-WMCluster @workloadManagementParameters
 
-    My-Logger "Disconnecting from Management vCenter ..."
-    Disconnect-VIServer * -Confirm:$false | Out-Null
-
     My-Logger "Disconnecting from NSX-T Manager ..."
     Disconnect-NsxtServer * -Confirm:$false | Out-Null
+
+    My-Logger "Disconnecting from Tanzu vCenter ..."
+    Disconnect-VIServer * -Confirm:$false | Out-Null
 }
 
 $EndTime = Get-Date

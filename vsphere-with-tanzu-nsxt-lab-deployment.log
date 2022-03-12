@@ -2812,3 +2812,2126 @@ ScriptOutput
 [03-10-2022_09:18:51] Connecting to NSX-T Manager to get NSX Edge Cluster ID ...
 [03-10-2022_09:19:55] Successfully logged into NSX-T Manager nsxmgr01.lab01.vlab.net  ...
 [03-10-2022_09:19:55] Enabling Workload Management ...
+[03-10-2022_11:20:02] Disconnecting from Management vCenter ...
+[03-10-2022_11:20:02] vSphere with Tanzu using NSX-T Lab Deployment Complete!
+[03-10-2022_11:20:02] StartTime: 03/10/2022 09:18:50
+[03-10-2022_11:20:02]   EndTime: 03/10/2022 11:20:02
+[03-10-2022_11:20:02]  Duration: 121.21 minutes
+[03-10-2022_07:17:41] Connecting to Management vCenter Server vc01.lab01.vlab.net ...
+[03-10-2022_07:19:27] Deploying Nested ESXi VM vesxi70-01.lab01.vlab.net ...
+[03-10-2022_07:19:27] Adding vmnic2/vmnic3 to tanzu-vtep ...
+[03-10-2022_07:19:27] Updating vCPU Count to 4 & vMEM to 24 GB ...
+[03-10-2022_07:19:27] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+[03-10-2022_07:19:27] Powering On vesxi70-01.lab01.vlab.net ...
+[03-10-2022_07:19:49] Deploying Nested ESXi VM vesxi70-02.lab01.vlab.net ...
+[03-10-2022_07:19:49] Adding vmnic2/vmnic3 to tanzu-vtep ...
+[03-10-2022_07:19:49] Updating vCPU Count to 4 & vMEM to 24 GB ...
+[03-10-2022_07:19:49] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+[03-10-2022_07:19:49] Powering On vesxi70-02.lab01.vlab.net ...
+[03-10-2022_07:20:10] Deploying Nested ESXi VM vesxi70-03.lab01.vlab.net ...
+[03-10-2022_07:20:10] Adding vmnic2/vmnic3 to tanzu-vtep ...
+[03-10-2022_07:20:10] Updating vCPU Count to 4 & vMEM to 24 GB ...
+[03-10-2022_07:20:10] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+[03-10-2022_07:20:10] Powering On vesxi70-03.lab01.vlab.net ...
+[03-10-2022_07:21:34] Connecting to Management vCenter Server vc01.sil.net ...
+[03-10-2022_07:21:35] Deploying Nested ESXi VM vesxi70-01.lab01.vlab.net ...
+[03-10-2022_07:22:49] Adding vmnic2/vmnic3 to tanzu-vtep ...
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 3    Vmxnet3         tanzu-vtep      00:50:56:a4:ab:da      False
+
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 4    Vmxnet3         tanzu-vtep      00:50:56:a4:38:86      False
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.o… failOpen             VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.o… failOpen             VM                   
+
+[03-10-2022_07:23:00] Updating vCPU Count to 4 & vMEM to 24 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-01.lab01.vl… PoweredOff 4        24.000
+
+[03-10-2022_07:23:01] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+16.000          Persistent           …lab01.vlab.net_1/vesxi70-01.lab01.vlab.net_1.vmdk
+
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+150.000         Persistent           …lab01.vlab.net_1/vesxi70-01.lab01.vlab.net_2.vmdk
+
+[03-10-2022_07:23:09] Powering On vesxi70-01.lab01.vlab.net ...
+[03-10-2022_07:23:09] Deploying Nested ESXi VM vesxi70-02.lab01.vlab.net ...
+[03-10-2022_07:24:33] Adding vmnic2/vmnic3 to tanzu-vtep ...
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 3    Vmxnet3         tanzu-vtep      00:50:56:a4:80:e9      False
+
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 4    Vmxnet3         tanzu-vtep      00:50:56:a4:e9:12      False
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.o… failOpen             VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.o… failOpen             VM                   
+
+[03-10-2022_07:24:45] Updating vCPU Count to 4 & vMEM to 24 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-02.lab01.vl… PoweredOff 4        24.000
+
+[03-10-2022_07:24:46] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+16.000          Persistent           …2.lab01.vlab.net/vesxi70-02.lab01.vlab.net_1.vmdk
+
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+150.000         Persistent           …2.lab01.vlab.net/vesxi70-02.lab01.vlab.net_2.vmdk
+
+[03-10-2022_07:24:53] Powering On vesxi70-02.lab01.vlab.net ...
+[03-10-2022_07:24:53] Deploying Nested ESXi VM vesxi70-03.lab01.vlab.net ...
+[03-10-2022_07:26:16] Adding vmnic2/vmnic3 to tanzu-vtep ...
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 3    Vmxnet3         tanzu-vtep      00:50:56:a4:6e:4c      False
+
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 4    Vmxnet3         tanzu-vtep      00:50:56:a4:ed:b3      False
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.o… failOpen             VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.o… failOpen             VM                   
+
+[03-10-2022_07:26:28] Updating vCPU Count to 4 & vMEM to 24 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-03.lab01.vl… PoweredOff 4        24.000
+
+[03-10-2022_07:26:29] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+16.000          Persistent           …3.lab01.vlab.net/vesxi70-03.lab01.vlab.net_1.vmdk
+
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+150.000         Persistent           …3.lab01.vlab.net/vesxi70-03.lab01.vlab.net_2.vmdk
+
+[03-10-2022_07:26:35] Powering On vesxi70-03.lab01.vlab.net ...
+[03-10-2022_07:26:35] Deploying Nested ESXi VM vesxi70-04.lab01.vlab.net ...
+[03-10-2022_07:27:58] Adding vmnic2/vmnic3 to tanzu-vtep ...
+
+[32;1mName                 Type            NetworkName     MacAddress         Wake[0m
+[32;1m                                                                        OnLa[0m
+[32;1m                                                                        nEna[0m
+[32;1m                                                                        bled[0m
+[32;1m----                 ----            -----------     ----------         ----[0m
+Network adapter 3    Vmxnet3         tanzu-vtep      00:50:56:a4:a5:2f  …lse
+
+
+[32;1mName                 Type            NetworkName     MacAddress         Wake[0m
+[32;1m                                                                        OnLa[0m
+[32;1m                                                                        nEna[0m
+[32;1m                                                                        bled[0m
+[32;1m----                 ----            -----------     ----------         ----[0m
+Network adapter 4    Vmxnet3         tanzu-vtep      00:50:56:a4:32:0c  …lse
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.o… failOpen             VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.o… failOpen             VM                   
+
+[03-10-2022_07:28:09] Updating vCPU Count to 4 & vMEM to 24 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-04.lab01.vl… PoweredOff 4        24.000
+
+[03-10-2022_07:28:11] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+16.000          Persistent           …4.lab01.vlab.net/vesxi70-04.lab01.vlab.net_1.vmdk
+
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+150.000         Persistent           …4.lab01.vlab.net/vesxi70-04.lab01.vlab.net_2.vmdk
+
+[03-10-2022_07:28:17] Powering On vesxi70-04.lab01.vlab.net ...
+[03-10-2022_07:28:17] Deploying NSX Manager VM nsxmgr3-01 ...
+[03-10-2022_07:49:32] Updating vCPU Count to 6 & vMEM to 24 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+nsxmgr3-01           PoweredOff 6        24.000
+
+[03-10-2022_07:49:33] Disabling vCPU Reservation ...
+
+[32;1mVM                   NumCpuShares    CpuSharesLevel  NumMemShares    MemSharesLevel[0m
+[32;1m--                   ------------    --------------  ------------    --------------[0m
+nsxmgr3-01           4000            Normal          163840          Normal
+
+[03-10-2022_07:49:35] Powering On nsxmgr3-01 ...
+[03-10-2022_07:49:35] Creating VCSA JSON Configuration file for deployment ...
+[03-10-2022_07:49:35] Deploying the VCSA ...
+Run the installer with "-v" or "--verbose" to log detailed information
+Updating log file location, copying 'C:\Users\souja\AppData\Local\Temp\vcsaCliInstaller-2022-03-11-00-49-0vbldppq\vcsa-cli-installer.log' to desired location as a backup: 'C:\Users\souja\AppData\Local\Temp\vcsaCliInstaller-2022-03-11-00-49-0vbldppq\workflow_1646959777938\vcsa-cli-installer.log.bak'
+Consuming the installer build:16998074
+Workflow log-dir
+C:\Users\souja\AppData\Local\Temp\vcsaCliInstaller-2022-03-11-00-49-0vbldppq\workflow_1646959777938
+====== [START] Start executing Task: To validate CLI options at 00:49:38 ======
+Command line arguments verfied.
+ [SUCCEEDED] Successfully executed Task 'CLIOptionsValidationTask: Executing CLI
+optionsValidation task' in TaskFlow 'template_validation' at 00:49:38
+ [START] Start executing Task: To validate the syntax of the template. at
+00:49:38
+Template syntax validation for template
+'C:\Users\souja\AppData\Local\Temp\jsontemplate.json' succeeded.
+Syntax validation for all templates succeeded.
+ [SUCCEEDED] Successfully executed Task 'SyntaxValidationTask: Executing
+Template Syntax Validation task' in TaskFlow 'template_validation' at 00:49:38
+ [START] Start executing Task: To check the version of each template, and for
+each older template that supports CEIP, convert it to the latest template
+format, and save it to the Template Blackboard at 00:49:38
+Template version processing for template
+'C:\Users\souja\AppData\Local\Temp\jsontemplate.json' succeeded.
+Version processing for all templates succeeded.
+ [SUCCEEDED] Successfully executed Task 'VersionProcessingTask: Executing
+Template Version Processing task' in TaskFlow 'template_validation' at 00:49:38
+ [START] Start executing Task: To validate the template structure against the
+rules specified by a corresponding template schema. at 00:49:38
+Template structure validation for template
+'C:\Users\souja\AppData\Local\Temp\jsontemplate.json' succeeded.
+Structure validation for all templates succeeded.
+ [SUCCEEDED] Successfully executed Task 'StructureValidationTask: Executing
+Template Structure Validation task' in TaskFlow 'template_validation' at
+00:49:39
+ [START] Start executing Task: To create a dependency graph for the provided
+templates, with an edge pairing two templates that are dependent on each other.
+Such graph relationships will affect whether certain templates can be deployed
+in parallel, or must be deployed sequentially. at 00:49:39
+Dependency processing for all templates succeeded.
+ [SUCCEEDED] Successfully executed Task 'DependencyProcessingTask: Executing
+Template Dependency Processing task' in TaskFlow 'template_validation' at
+00:49:39
+ [START] Start executing Task: Validate that requirements are met in the source
+VCSA. at 00:49:42
+InstallRequirementCollector: Reached gathering requirement
+ [SUCCEEDED] Successfully executed Task 'SrcRequirementTask: Running
+SrcRequirementTask' in TaskFlow 'jsontemplate' at 00:49:42
+====== [START] Start executing Task: Perform precheck tasks. at 00:49:45 ======
+ [START] Start executing Task: Verify that the provided credentials for the
+target ESXi/VC are valid at 00:49:48
+The certificate of server 'vc01.sil.net' will not be verified because you have
+provided either the '--no-ssl-certificate-verification' or '--no-esx-ssl-verify'
+command parameter, which disables verification for all certificates. Remove this
+parameter from the command line if you want server certificates to be verified.
+ [SUCCEEDED] Successfully executed Task 'Running precheck: TargetCredentials' in
+TaskFlow 'install' at 00:49:48
+ [START] Start executing Task: Verify the target host type matches the one given
+in the template at 00:49:50
+ [SUCCEEDED] Successfully executed Task 'Running precheck: TargetHostType' in
+TaskFlow 'install' at 00:49:50
+ [START] Start executing Task: Verify that the target ESXi or VC version meets
+the minimum requirements at 00:49:53
+ [SUCCEEDED] Successfully executed Task 'Running precheck: TargetVersion' in
+TaskFlow 'install' at 00:49:53
+ [START] Start executing Task: Validate that the OVA image has the required OVA
+properties. at 00:49:55
+ [SUCCEEDED] Successfully executed Task 'Running precheck: OVAProperties.' in
+TaskFlow 'install' at 00:49:57
+ [START] Start executing Task: Validate the provided ip/fqdn is available to use
+at 00:50:00
+Pinging IPv4 address 192.168.50.20
+Time-out pinging 192.168.50.20.
+Pinging IPv4 address vc01.lab01.vlab.net
+Time-out pinging vc01.lab01.vlab.net.
+ [SUCCEEDED] Successfully executed Task 'Running precheck: IpFqdnInUse' in
+TaskFlow 'install' at 00:50:17
+ [SUCCEEDED] Successfully executed Task 'Running precheck:
+LinkingTargetHostnameValidation' in TaskFlow 'install' at 00:50:19
+ [START] Start executing Task: Validate the target ESXi management status at
+00:50:22
+ [SUCCEEDED] Successfully executed Task 'Running precheck: ESXManagementStatus'
+in TaskFlow 'install' at 00:50:22
+ [START] Start executing Task: Precheck CPU, memory and datastore size
+requirements for a host. at 00:50:24
+ [SUCCEEDED] Successfully executed Task 'Running precheck: HostConfigs' in
+TaskFlow 'install' at 00:50:26
+ [START] Start executing Task: Validate the provided target appliance name is
+available to use at 00:50:28
+ [SUCCEEDED] Successfully executed Task 'Running precheck: ApplianceName' in
+TaskFlow 'install' at 00:50:28
+================== [START] Start executing Task:  at 00:50:31 ==================
+= [SUCCEEDED] Successfully executed Task '' in TaskFlow 'install' at 00:50:31 =
+ [START] Start executing Task: Check whether the datastore's free space
+accommodate the VCSA's deployment option at 00:50:33
+ [SUCCEEDED] Successfully executed Task 'Running precheck: TargetDsFreespace' in
+TaskFlow 'install' at 00:50:33
+ [START] Start executing Task: Verify the provided SSO info is valid by
+connecting to the STS service. at 00:50:35
+ [SUCCEEDED] Successfully executed Task 'Running precheck: SSOCredentials' in
+TaskFlow 'install' at 00:50:35
+ [START] Start executing Task: Verify that the provided external SSO
+(PSC)/Embedded info is valid at 00:50:37
+ [SUCCEEDED] Successfully executed Task 'Running precheck: SSOExternal' in
+TaskFlow 'install' at 00:50:37
+ [SUCCEEDED] Successfully executed Task 'PrecheckTask: Running prechecks.' in
+TaskFlow 'jsontemplate' at 00:50:39
+ [START] Start executing Task: Invoke OVF Tool to deploy VCSA for installation,
+upgrade, and migration at 00:50:41
+OVF Tool: Opening OVA source:
+C:\Users\souja\OneDrive\Documents\GitHub\vsphere-with-tanzu-nsxt-automated-lab-deployment\tanzu\VMware-VCSA-all-7.0.1-17491101\vcsa-cli-installer\win32\..\..\vcsa\VMware-vCenter-Server-Appliance-7.0.1.00300-17491101_OVF10.ova
+OVF Tool:  The manifest validates
+OVF Tool:  The provided certificate is in valid period
+OVF Tool: Source is signed but could not verify certificate (possibly
+self-signed)
+OVF Tool:  Certificate information:
+OVF Tool:    CertIssuer:/C=US/ST=California/L=Palo Alto/O=VMware, Inc.
+OVF Tool:    CertSubject:/C=US/ST=California/L=Palo Alto/O=VMware, Inc.
+OVF Tool:    -----BEGIN CERTIFICATE-----
+OVF Tool:    MIIDyzCCArOgAwIBAgIJAIR/y018RgMXMA0GCSqGSIb3DQEBCwUAME0xCzAJBgNV
+OVF Tool:    BAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRIwEAYDVQQHDAlQYWxvIEFsdG8x
+OVF Tool:    FTATBgNVBAoMDFZNd2FyZSwgSW5jLjAeFw0xNjA5MDgwMTE3MjFaFw0yOTEyMzEw
+OVF Tool:    MTE3MjFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRIwEAYD
+OVF Tool:    VQQHDAlQYWxvIEFsdG8xFTATBgNVBAoMDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+OVF Tool:    hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+OVF Tool:    9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+OVF Tool:    4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+OVF Tool:    9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+OVF Tool:    W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+OVF Tool:    kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+OVF Tool:    HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+OVF Tool:    m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2Fs
+OVF Tool:    aWZvcm5pYTESMBAGA1UEBwwJUGFsbyBBbHRvMRUwEwYDVQQKDAxWTXdhcmUsIElu
+OVF Tool:    Yy6CCQCEf8tNfEYDFzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAD
+OVF Tool:    K9uUhsXzpuUcWJq83Vh2HHSxZ/DdR6h+FNYHfEX8h8DOIwhRHhIHoqXkwwnpbjip
+OVF Tool:    FBtSzNKzTmzMQBwB7GwzGSsBO2TU8alX2ssnDg2AqwgIeLzclfaQlYoid678Krew
+OVF Tool:    nFryr9PYMntr7uyU1duesmey12GS2z5UIhA4BaOnrPJcLCP22nXVlPEsa46ob7XH
+OVF Tool:    j4ngZ0ck/qE58Z90GaAuxaa2R3OlHQ+AhXc3q5IixqMDa0MLPd41Qv2kC5iZ+tCf
+OVF Tool:    XVdlf4/RqQBNHR8FFVxcjpaROId9Y9/yHdsMt55nN7pf7vRf5vSk1bHvLmlOYgiR
+OVF Tool:    tAj6rdPq0c+/C+fct1cM
+OVF Tool:    -----END CERTIFICATE-----
+OVF Tool:  Opening VI target:
+vi://administrator%40vsphere.local@vc01.sil.net:443/sil.net/host/pesxi
+OVF Tool:  Deploying to VI:
+vi://administrator%40vsphere.local@vc01.sil.net:443/sil.net/host/pesxi
+
+OVF Tool: Disk progress: 1%
+OVF Tool: Disk progress: 2%
+OVF Tool: Disk progress: 3%
+OVF Tool: Disk progress: 4%
+OVF Tool: Disk progress: 5%
+OVF Tool: Disk progress: 6%
+OVF Tool: Disk progress: 7%
+OVF Tool: Disk progress: 8%
+OVF Tool: Disk progress: 9%
+OVF Tool: Disk progress: 10%
+OVF Tool: Disk progress: 11%
+OVF Tool: Disk progress: 12%
+OVF Tool: Disk progress: 13%
+OVF Tool: Disk progress: 14%
+OVF Tool: Disk progress: 15%
+OVF Tool: Disk progress: 16%
+OVF Tool: Disk progress: 17%
+OVF Tool: Disk progress: 18%
+OVF Tool: Disk progress: 19%
+OVF Tool: Disk progress: 20%
+OVF Tool: Disk progress: 21%
+OVF Tool: Disk progress: 22%
+OVF Tool: Disk progress: 23%
+OVF Tool: Disk progress: 24%
+OVF Tool: Disk progress: 25%
+OVF Tool: Disk progress: 26%
+OVF Tool: Disk progress: 27%
+OVF Tool: Disk progress: 28%
+OVF Tool: Disk progress: 29%
+OVF Tool: Disk progress: 30%
+OVF Tool: Disk progress: 31%
+OVF Tool: Disk progress: 32%
+OVF Tool: Disk progress: 33%
+OVF Tool: Disk progress: 34%
+OVF Tool: Disk progress: 35%
+OVF Tool: Disk progress: 36%
+OVF Tool: Disk progress: 37%
+OVF Tool: Disk progress: 38%
+OVF Tool: Disk progress: 39%
+OVF Tool: Disk progress: 40%
+OVF Tool: Disk progress: 41%
+OVF Tool: Disk progress: 42%
+OVF Tool: Disk progress: 43%
+OVF Tool: Disk progress: 44%
+OVF Tool: Disk progress: 45%
+OVF Tool: Disk progress: 46%
+OVF Tool: Disk progress: 47%
+OVF Tool: Disk progress: 48%
+OVF Tool: Disk progress: 49%
+OVF Tool: Disk progress: 50%
+OVF Tool: Disk progress: 51%
+OVF Tool: Disk progress: 52%
+OVF Tool: Disk progress: 53%
+OVF Tool: Disk progress: 54%
+OVF Tool: Disk progress: 55%
+OVF Tool: Disk progress: 56%
+OVF Tool: Disk progress: 57%
+OVF Tool: Disk progress: 58%
+OVF Tool: Disk progress: 59%
+OVF Tool: Disk progress: 60%
+OVF Tool: Disk progress: 61%
+OVF Tool: Disk progress: 62%
+OVF Tool: Disk progress: 63%
+OVF Tool: Disk progress: 64%
+OVF Tool: Disk progress: 65%
+OVF Tool: Disk progress: 66%
+OVF Tool: Disk progress: 67%
+OVF Tool: Disk progress: 68%
+OVF Tool: Disk progress: 69%
+OVF Tool: Disk progress: 70%
+OVF Tool: Disk progress: 71%
+OVF Tool: Disk progress: 72%
+OVF Tool: Disk progress: 73%
+OVF Tool: Disk progress: 74%
+OVF Tool: Disk progress: 75%
+OVF Tool: Disk progress: 76%
+OVF Tool: Disk progress: 77%
+OVF Tool: Disk progress: 78%
+OVF Tool: Disk progress: 79%
+OVF Tool: Disk progress: 80%
+OVF Tool: Disk progress: 81%
+OVF Tool: Disk progress: 82%
+OVF Tool: Disk progress: 83%
+OVF Tool: Disk progress: 84%
+OVF Tool: Disk progress: 85%
+OVF Tool: Disk progress: 86%
+OVF Tool: Disk progress: 87%
+OVF Tool: Disk progress: 88%
+OVF Tool: Disk progress: 89%
+OVF Tool: Disk progress: 90%
+OVF Tool: Disk progress: 91%
+OVF Tool: Disk progress: 92%
+OVF Tool: Disk progress: 93%
+OVF Tool: Disk progress: 94%
+OVF Tool: Disk progress: 95%
+OVF Tool: Disk progress: 96%
+OVF Tool: Disk progress: 97%
+OVF Tool: Disk progress: 98%
+OVF Tool: Disk progress: 99%
+
+OVF Tool: Transfer Completed
+OVF Tool:  Powering on VM: vc01-lab01-vlab-net
+
+OVF Tool: Task progress: 66%
+OVF Tool: Task progress: 100%
+
+OVF Tool: Task Completed
+OVF Tool:  Waiting for IP address...
+OVF Tool: Received IP address: fe80::250:56ff:fea4:909c
+OVF Tool:  Completed successfully
+ [SUCCEEDED] Successfully executed Task 'Deploying vCenter Server Appliance' in
+TaskFlow 'jsontemplate' at 01:04:55
+ [START] Start executing Task: Monitor the entire VCSA deployment using
+appliance REST API at 01:04:58
+Checking if the target VCSA is powered on and ready for operations...
+Successfully verified that the target VCSA 'vc01-lab01-vlab-net' has been
+powered on and is now ready for operations
+Checking if the target VCSA appliance API is available for query
+The certificate of server '[fe80::250:56ff:fea4:909c]' will not be verified
+because you have provided either the '--no-ssl-certificate-verification' or
+'--no-esx-ssl-verify' command parameter, which disables verification for all
+certificates. Remove this parameter from the command line if you want server
+certificates to be verified.
+The certificate of server '192.168.50.20' will not be verified because you have
+provided either the '--no-ssl-certificate-verification' or '--no-esx-ssl-verify'
+command parameter, which disables verification for all certificates. Remove this
+parameter from the command line if you want server certificates to be verified.
+Successfully verified that the target VCSA appliance API is available for query
+Start monitoring target VCSA deployment, deployment status will be written into:
+C:\Users\souja\AppData\Local\Temp\vcsaCliInstaller-2022-03-11-00-49-0vbldppq\workflow_1646959777938\jsontemplate\vcsa_deployment.json
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 53/100)  - Installed
+rvc_1.6.0-16376082_x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 57/100)  - Installed
+vmware-certificate-server-7.0.1.9466-17260200.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 57/100)  - Installed
+vmware-certificate-server-7.0.1.9466-17260200.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 57/100)  - Installed
+vmware-certificate-server-7.0.1.9466-17260200.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 57/100)  - Installed
+vmware-certificate-server-7.0.1.9466-17260200.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 70/100)  - Installed
+vmware-sca-6.8.0.1377-16989806.noarch.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 81/100)  - Installed
+vmware-cam-7.0.1.1441-17260201.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 85/100)  - Installed
+VMware-wcp-0.0.6-17201796.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 85/100)  - Installed
+VMware-wcp-0.0.6-17201796.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 9/100)     - Starting
+VMware HTTP Reverse Proxy...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 20/100)    - Starting
+VMware Lookup Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 22/100)    - Starting
+VMware Security Token Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 28/100)    - Starting
+VMware License Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 34/100)    - Starting
+VMware Service Lifecycle Manager API...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 36/100)    - Starting
+VMware vCenter-Services...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 44/100)    - Starting
+VMware vSphere ESXi Dump Collector...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 57/100)    - Starting
+VMware Trust Management Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 59/100)    - Starting
+VMware vCenter Server...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 65/100)    - Starting
+VMware ESX Agent Manager...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 67/100)    - Starting
+VMware Hybrid VC Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 69/100)    - Starting
+VMware vSphere Profile-Driven Storage Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 73/100)    - Starting
+VMware vCenter High Availability...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 79/100)    - Starting
+VMware VSAN Health Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 81/100)    - Starting
+VMware vService Manager...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 85/100)    - Starting
+VMware vSphere Auto Deploy Waiter...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 91/100)    - Starting
+VMware Content Library Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 91/100)    - Starting
+VMware Content Library Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 97/100)    - Starting
+VMware Performance Charts...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(SUCCEEDED 100/100) - Task has
+completed successfully.
+Successfully completed VCSA deployment.  VCSA Deployment Start Time:
+2022-03-11T01:04:14.266Z VCSA Deployment End Time: 2022-03-11T01:22:44.364Z
+ [SUCCEEDED] Successfully executed Task 'MonitorDeploymentTask: Monitoring
+Deployment' in TaskFlow 'jsontemplate' at 01:22:47
+Monitoring VCSA Deploy task completed
+The certificate of server 'vc01.lab01.vlab.net' will not be verified because you
+have provided either the '--no-ssl-certificate-verification' or
+'--no-esx-ssl-verify' command parameter, which disables verification for all
+certificates. Remove this parameter from the command line if you want server
+certificates to be verified.
+== [START] Start executing Task: Join active domain if necessary at 01:22:50 ==
+Domain join task not applicable, skipping task
+ [SUCCEEDED] Successfully executed Task 'Running deployment: Domain Join' in
+TaskFlow 'jsontemplate' at 01:22:50
+ [START] Start executing Task: Provide the login information about new
+appliance. at 01:22:53
+    Appliance Name: vc01-lab01-vlab-net
+    System Name: vc01.lab01.vlab.net
+    System IP: 192.168.50.20
+    Log in as: Administrator@vsphere.local
+ [SUCCEEDED] Successfully executed Task 'ApplianceLoginSummaryTask: Provide
+appliance login information.' in TaskFlow 'jsontemplate' at 01:22:54
+=================================== 01:22:57 ===================================
+Result and Log File Information...
+WorkFlow log directory:
+C:\Users\souja\AppData\Local\Temp\vcsaCliInstaller-2022-03-11-00-49-0vbldppq\workflow_1646959777938
+[03-10-2022_08:22:57] Setting up NSX-T Edge to join NSX-T Management Plane ...
+[03-10-2022_08:24:15] Successfully logged into NSX-T Manager nsxmgr01.lab01.vlab.net  ...
+[03-10-2022_08:24:15] Retrieving NSX Manager Thumbprint ...
+[03-10-2022_08:24:15] Accepting NSX Manager EULA ...
+[03-10-2022_08:24:15] Disconnecting from NSX-T Manager ...
+[03-10-2022_08:24:16] Deploying NSX Edge VM tanzu-nsx-edge-01 ...
+[03-10-2022_08:29:04] Updating vCPU Count to 8 & vMEM to 32 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+tanzu-nsx-edge-01    PoweredOff 8        32.000
+
+[03-10-2022_08:29:05] Powering On tanzu-nsx-edge-01 ...
+[03-10-2022_08:29:05] Creating vApp Nested-vSphere-with-Tanzu-NSX-T-Lab-szQmvHiq ...
+[03-10-2022_08:29:06] Moving Nested ESXi VMs into Nested-vSphere-with-Tanzu-NSX-T-Lab-szQmvHiq vApp ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-01.lab01.vl… PoweredOn  4        24.000
+
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-02.lab01.vl… PoweredOn  4        24.000
+
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-03.lab01.vl… PoweredOn  4        24.000
+
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-04.lab01.vl… PoweredOn  4        24.000
+
+[03-10-2022_08:29:12] Moving vc01-lab01-vlab-net into Nested-vSphere-with-Tanzu-NSX-T-Lab-szQmvHiq vApp ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vc01-lab01-vlab-net  PoweredOn  2        12.000
+
+[03-10-2022_08:29:14] Moving nsxmgr3-01 into Nested-vSphere-with-Tanzu-NSX-T-Lab-szQmvHiq vApp ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+nsxmgr3-01           PoweredOn  6        24.000
+
+[03-10-2022_08:29:15] Moving NSX Edge VMs into Nested-vSphere-with-Tanzu-NSX-T-Lab-szQmvHiq vApp ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+tanzu-nsx-edge-01    PoweredOn  8        32.000
+
+[03-10-2022_08:29:17] Moving Nested-vSphere-with-Tanzu-NSX-T-Lab-szQmvHiq to VM Folder Tanzu ...
+
+[32;1mName                 Status    CpuSharesL CpuReserva CpuLimitMh MemSharesL MemReservationG      MemLimitGB[0m
+[32;1m                                     evel    tionMhz          z       evel               B[0m
+[32;1m----                 ------    ---------- ---------- ---------- ---------- ---------------      ----------[0m
+Nested-vSphere-with… Started       Normal          0         -1     Normal           0.000          -1.000
+
+[03-10-2022_08:29:18] Disconnecting from vc01.sil.net ...
+[03-10-2022_08:29:18] Connecting to the new VCSA ...
+[03-10-2022_08:29:19] Creating Datacenter Tanzu-Datacenter ...
+
+[32;1mName[0m
+[32;1m----[0m
+Tanzu-Datacenter
+
+[03-10-2022_08:29:19] Creating VSAN Cluster Workload-Cluster ...
+
+[32;1mName                           HAEnabled  HAFailover DrsEnabled DrsAutomationLevel[0m
+[32;1m                                          Level[0m
+[32;1m----                           ---------  ---------- ---------- ------------------[0m
+Workload-Cluster               True       1          True       FullyAutomated
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+das.ignoreRedundant… True                 ClusterHA            
+
+[03-10-2022_08:29:22] Adding ESXi host vesxi70-01.lab01.vlab.net to Cluster ...
+
+[32;1mName                 ConnectionState PowerState NumCpu CpuUsageMhz CpuTotalMhz   MemoryUsageGB   MemoryTotalGB[0m
+[32;1m----                 --------------- ---------- ------ ----------- -----------   -------------   -------------[0m
+vesxi70-01.lab01.vl… Connected       PoweredOn       4           0        9196           0.000          23.999
+
+[03-10-2022_08:29:33] Adding ESXi host vesxi70-02.lab01.vlab.net to Cluster ...
+
+[32;1mName                 ConnectionState PowerState NumCpu CpuUsageMhz CpuTotalMhz   MemoryUsageGB   MemoryTotalGB[0m
+[32;1m----                 --------------- ---------- ------ ----------- -----------   -------------   -------------[0m
+vesxi70-02.lab01.vl… Connected       PoweredOn       4           0        9196           0.000          23.999
+
+[03-10-2022_08:29:43] Adding ESXi host vesxi70-03.lab01.vlab.net to Cluster ...
+
+[32;1mName                 ConnectionState PowerState NumCpu CpuUsageMhz CpuTotalMhz   MemoryUsageGB   MemoryTotalGB[0m
+[32;1m----                 --------------- ---------- ------ ----------- -----------   -------------   -------------[0m
+vesxi70-03.lab01.vl… Connected       PoweredOn       4           0        9196           0.000          23.999
+
+[03-10-2022_08:29:54] Adding ESXi host vesxi70-04.lab01.vlab.net to Cluster ...
+
+[32;1mName                 ConnectionState PowerState NumCpu CpuUsageMhz CpuTotalMhz   MemoryUsageGB   MemoryTotalGB[0m
+[32;1m----                 --------------- ---------- ------ ----------- -----------   -------------   -------------[0m
+vesxi70-04.lab01.vl… Connected       PoweredOn       4           0        9196           0.000          23.999
+
+[03-10-2022_08:30:06] Enabling VSAN & disabling VSAN Health Check ...
+
+[32;1mCluster              VsanEnabled  IsStretchedCluster   Last HCL Updated[0m
+[32;1m-------              -----------  ------------------   ----------------[0m
+Workload-Cluster     True         False                3/8/2022 4:25:00 PM
+
+[03-10-2022_08:30:23] Querying ESXi host disks to create VSAN Diskgroups ...
+[03-10-2022_08:30:23] Creating VSAN DiskGroup for vesxi70-01.lab01.vlab.net ...
+
+[32;1mName                                               VMHost               DiskGroupType[0m
+[32;1m----                                               ------               -------------[0m
+Disk group (02000000006000c29ae72f71db5733405e7c9… vesxi70-01.lab01.vl… AllFlash
+
+[03-10-2022_08:30:55] Querying ESXi host disks to create VSAN Diskgroups ...
+[03-10-2022_08:30:55] Creating VSAN DiskGroup for vesxi70-02.lab01.vlab.net ...
+
+[32;1mName                                               VMHost               DiskGroupType[0m
+[32;1m----                                               ------               -------------[0m
+Disk group (02000000006000c296c4c0536d47fd38bf44b… vesxi70-02.lab01.vl… AllFlash
+
+[03-10-2022_08:31:28] Querying ESXi host disks to create VSAN Diskgroups ...
+[03-10-2022_08:31:28] Creating VSAN DiskGroup for vesxi70-03.lab01.vlab.net ...
+
+[32;1mName                                               VMHost               DiskGroupType[0m
+[32;1m----                                               ------               -------------[0m
+Disk group (02000000006000c2996e37c2cd6e651460d3b… vesxi70-03.lab01.vl… AllFlash
+
+[03-10-2022_08:32:00] Querying ESXi host disks to create VSAN Diskgroups ...
+[03-10-2022_08:32:00] Creating VSAN DiskGroup for vesxi70-04.lab01.vlab.net ...
+
+[32;1mName                                               VMHost               DiskGroupType[0m
+[32;1m----                                               ------               -------------[0m
+Disk group (02000000006000c2906520e1c885dc7a4dceb… vesxi70-04.lab01.vl… AllFlash
+
+
+[32;1mName                           NumPorts PortBinding[0m
+[32;1m----                           -------- -----------[0m
+DVPG-Management Network        128      Static
+
+[03-10-2022_08:32:35] Adding vesxi70-01.lab01.vlab.net to Tanzu-VDS
+[03-10-2022_08:32:39] Adding vesxi70-02.lab01.vlab.net to Tanzu-VDS
+[03-10-2022_08:32:42] Adding vesxi70-03.lab01.vlab.net to Tanzu-VDS
+[03-10-2022_08:32:46] Adding vesxi70-04.lab01.vlab.net to Tanzu-VDS
+[03-10-2022_08:32:50] Clearing default VSAN Health Check Alarms, not applicable in Nested ESXi env ...
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+UserVars.SuppressCo… 1                    VMHost               
+
+
+[32;1mName       Mac               DhcpEnabled IP              SubnetMask      DeviceName[0m
+[32;1m----       ---               ----------- --              ----------      ----------[0m
+vmk0       00:50:56:a4:64:85 False       192.168.50.21   255.255.255.0         vmk0
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+UserVars.SuppressCo… 1                    VMHost               
+
+
+[32;1mName       Mac               DhcpEnabled IP              SubnetMask      DeviceName[0m
+[32;1m----       ---               ----------- --              ----------      ----------[0m
+vmk0       00:50:56:a4:1e:4b False       192.168.50.22   255.255.255.0         vmk0
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+UserVars.SuppressCo… 1                    VMHost               
+
+
+[32;1mName       Mac               DhcpEnabled IP              SubnetMask      DeviceName[0m
+[32;1m----       ---               ----------- --              ----------      ----------[0m
+vmk0       00:50:56:a4:f6:79 False       192.168.50.23   255.255.255.0         vmk0
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+UserVars.SuppressCo… 1                    VMHost               
+
+
+[32;1mName       Mac               DhcpEnabled IP              SubnetMask      DeviceName[0m
+[32;1m----       ---               ----------- --              ----------      ----------[0m
+vmk0       00:50:56:a4:18:9d False       192.168.50.24   255.255.255.0         vmk0
+
+[03-10-2022_08:33:11] Creating Tanzu Storage Policies and attaching to vsanDatastore ...
+
+[32;1mName                                     Cardinality Description[0m
+[32;1m----                                     ----------- -----------[0m
+tanzu-demo-tag-category                  Single      
+
+
+[32;1mName                           Category                       Description[0m
+[32;1m----                           --------                       -----------[0m
+tanzu-demo-storage             tanzu-demo-tag-category        
+
+
+[32;1mTag                                      Entity[0m
+[32;1m---                                      ------[0m
+tanzu-demo-tag-category/tanzu-demo-stor… vsanDatastore
+
+[03-10-2022_08:33:24] Creating TKG Subscribed Content Library TKG-Content-Library ...
+
+[32;1mName                                                                                     Type       Published Password[0m
+[32;1m                                                                                                              Protected[0m
+[32;1m----                                                                                     ----       --------- ----------[0m
+TKG-Content-Library                                                                      Subscribed           False
+
+[03-10-2022_08:33:35] Disconnecting from new VCSA ...
+[03-10-2022_08:33:35] Connecting to NSX-T Manager for post-deployment configuration ...
+[03-10-2022_08:34:51] Successfully logged into NSX-T Manager nsxmgr01.lab01.vlab.net  ...
+[03-10-2022_08:34:51] Verifying health of all NSX Manager/Controller Nodes ...
+[03-10-2022_08:34:51] Check health status of Mgmt Node 192.168.50.26 ...
+[03-10-2022_08:34:51] Checking health of Ctrl Node 192.168.50.26 ...
+[03-10-2022_08:34:51] Accepting CEIP Agreement ...
+[03-10-2022_08:34:52] Adding vCenter Server Compute Manager ...
+[03-10-2022_08:35:01] Waiting for VC registration to complete ...
+[03-10-2022_08:35:01] vc01.lab01.vlab.net is not ready, sleeping 30 seconds ...
+[03-10-2022_08:35:31] Creating Tunnel Endpoint IP Pool ...
+[03-10-2022_08:35:32] Creating Overlay & VLAN Transport Zones ...
+[03-10-2022_08:35:32] Creating ESXi Uplink Profile ...
+[03-10-2022_08:35:32] Creating Edge Uplink Profile ...
+URL: https://nsxmgr01.lab01.vlab.net/api/v1/transport-node-profiles
+Headers: 
+[32;1mName                           Value[0m
+[32;1m----                           -----[0m
+Content-Type                   application/json
+Accept                         application/json
+Authorization                  basic YWRtaW46Vk13YXJlMSFWTXdhcmUxIQ==
+
+
+Body: {
+  "resource_type": "TransportNode",
+  "display_name": "Tanzu-Host-Transport-Node-Profile",
+  "host_switch_spec": {
+    "host_switches": [
+      {
+        "host_switch_name": "nsxswitch",
+        "host_switch_mode": "STANDARD",
+        "host_switch_type": "VDS",
+        "host_switch_id": "50 05 ae 3a ca 89 a2 03-4a 83 ee 5b d8 0d ee b2",
+        "uplinks": [
+          {
+            "vds_uplink_name": "uplink1",
+            "uplink_name": "uplink1"
+          }
+        ],
+        "ip_assignment_spec": {
+          "resource_type": "StaticIpPoolSpec",
+          "ip_pool_id": "f6c32d50-5055-4567-9af0-2b5efb03aa58"
+        },
+        "host_switch_profile_ids": [
+          {
+            "key": "UplinkHostSwitchProfile",
+            "value": "518902b8-bedc-4927-bffa-07a892dcf349"
+          }
+        ],
+        "transport_zone_endpoints": [
+          {
+            "transport_zone_id": "a30b09bb-cd7a-4daf-bf7f-f71810695277"
+          }
+        ]
+      }
+    ],
+    "resource_type": "StandardHostSwitchSpec"
+  }
+}
+[03-10-2022_08:35:34] Creating Transport Node Profile Tanzu-Host-Transport-Node-Profile ...
+[03-10-2022_08:35:34] Successfully Created Transport Node Profile
+[03-10-2022_08:35:34] Applying Transport Node Profile to ESXi Transport Nodes ...
+[03-10-2022_08:35:38] Waiting for ESXi transport node configurations to complete ...
+[03-10-2022_08:35:38] ESXi transport node is still being configured (6% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:36:08] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:36:39] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:37:09] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:37:39] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:38:09] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:38:39] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:39:10] ESXi transport node is still being configured (40% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:39:40] ESXi transport node is still being configured (48% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:40:10] ESXi transport node is still being configured (48% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:40:40] ESXi transport node is still being configured (48% Completed), sleeping for 30 seconds ...
+[03-10-2022_08:41:10] ESXi transport node is still being configured (48% Completed), sleeping for 30 seconds ...
+URL: https://nsxmgr01.lab01.vlab.net/api/v1/transport-nodes
+Headers: 
+[32;1mName                           Value[0m
+[32;1m----                           -----[0m
+Content-Type                   application/json
+Accept                         application/json
+Authorization                  basic YWRtaW46Vk13YXJlMSFWTXdhcmUxIQ==
+
+
+Body: {
+  "resource_type": "TransportNode",
+  "node_id": "de059f04-a0da-11ec-ab44-005056a47a23",
+  "display_name": "tanzu-nsx-edge-01.lab01.vlab.net",
+  "host_switch_spec": {
+    "host_switches": [
+      {
+        "host_switch_name": "nsxswitch",
+        "host_switch_mode": "STANDARD",
+        "ip_assignment_spec": {
+          "resource_type": "StaticIpPoolSpec",
+          "ip_pool_id": "f6c32d50-5055-4567-9af0-2b5efb03aa58"
+        },
+        "pnics": [
+          {
+            "uplink_name": "uplink1",
+            "device_name": "fp-eth1"
+          }
+        ],
+        "host_switch_profile_ids": [
+          {
+            "key": "UplinkHostSwitchProfile",
+            "value": "518902b8-bedc-4927-bffa-07a892dcf349"
+          }
+        ],
+        "transport_zone_endpoints": [
+          {
+            "transport_zone_id": "a30b09bb-cd7a-4daf-bf7f-f71810695277"
+          }
+        ]
+      },
+      {
+        "host_switch_name": "edgeswitch",
+        "host_switch_mode": "STANDARD",
+        "pnics": [
+          {
+            "uplink_name": "tep-uplink",
+            "device_name": "fp-eth2"
+          }
+        ],
+        "ip_assignment_spec": {
+          "resource_type": "AssignedByDhcp"
+        },
+        "host_switch_profile_ids": [
+          {
+            "key": "UplinkHostSwitchProfile",
+            "value": "66a41572-573a-4375-867b-6dc98a776332"
+          }
+        ],
+        "transport_zone_endpoints": [
+          {
+            "transport_zone_id": "7baf28e0-2729-4463-af9b-374caefeac64"
+          }
+        ]
+      }
+    ],
+    "resource_type": "StandardHostSwitchSpec"
+  }
+}
+[03-10-2022_08:41:41] Creating NSX-T Edge Transport Node for tanzu-nsx-edge-01.lab01.vlab.net ...
+[03-10-2022_08:41:42] Successfully Created NSX-T Edge Transport Node 
+[03-10-2022_08:41:42] Waiting for Edge transport node configurations to complete ...
+[03-10-2022_08:41:42] Edge transport node is still being configured, sleeping for 30 seconds ...
+[03-10-2022_08:42:12] Creating Edge Cluster Edge-Cluster-01 and adding Edge Hosts ...
+[03-10-2022_08:42:12] Edge Cluster has not been realized, sleeping for 10 seconds ...
+[03-10-2022_08:42:23] Edge Cluster has been realized
+[03-10-2022_08:42:23] Creating Network Segment Tanzu-Segment ...
+[03-10-2022_08:42:27] Creating T0 Gateway Tanzu-T0-Gateway ...
+EdgeClusterMember: 0
+EdgeClusterPath: /infra/sites/default/enforcement-points/default/edge-clusters/ed255445-d5f7-47e1-8cd7-864edaaca9c5
+EdgeClusterNodePath: /infra/sites/default/enforcement-points/default/edge-clusters/ed255445-d5f7-47e1-8cd7-864edaaca9c5/edge-nodes/0
+[03-10-2022_08:42:32] Creating External T0 Gateway Interface ...
+[03-10-2022_08:42:35] Adding Static Route on T0 Gateway Interface from 0.0.0.0/0 to 192.168.50.1 ...
+[03-10-2022_08:42:37] Disconnecting from NSX-T Manager ...
+[03-10-2022_08:42:37] Connecting to Management vCenter Server vc01.sil.net for enabling Tanzu ...
+[03-10-2022_08:42:38] Creating local devops User in vCenter Server ...
+
+ScriptOutput
+--------------------------------------------------------------------------------------------------------------|  User account [devops] created successfully
+|  
+--------------------------------------------------------------------------------------------------------------
+
+[03-10-2022_08:42:44] Connecting to NSX-T Manager to get NSX Edge Cluster ID ...
+[03-10-2022_08:43:57] Successfully logged into NSX-T Manager nsxmgr01.lab01.vlab.net  ...
+[03-10-2022_08:43:57] Enabling Workload Management ...
+[03-10-2022_08:43:57] Disconnecting from Management vCenter ...
+[03-10-2022_08:43:57] vSphere with Tanzu using NSX-T Lab Deployment Complete!
+[03-10-2022_08:43:57] StartTime: 03/10/2022 19:21:30
+[03-10-2022_08:43:57]   EndTime: 03/10/2022 20:43:57
+[03-10-2022_08:43:57]  Duration: 82.45 minutes
+[03-10-2022_08:47:03] Connecting to Management vCenter Server vc01.sil.net ...
+[03-10-2022_08:47:07] Deploying Nested ESXi VM vesxi70-01.lab01.vlab.net ...
+[03-10-2022_08:48:23] Adding vmnic2/vmnic3 to tanzu-vtep ...
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 3    Vmxnet3         tanzu-vtep      00:50:56:a4:1b:5f      False
+
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 4    Vmxnet3         tanzu-vtep      00:50:56:a4:46:5b      False
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.o… failOpen             VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.o… failOpen             VM                   
+
+[03-10-2022_08:48:34] Updating vCPU Count to 4 & vMEM to 24 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-01.lab01.vl… PoweredOff 4        24.000
+
+[03-10-2022_08:48:36] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+16.000          Persistent           …lab01.vlab.net_1/vesxi70-01.lab01.vlab.net_1.vmdk
+
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+150.000         Persistent           …lab01.vlab.net_1/vesxi70-01.lab01.vlab.net_2.vmdk
+
+[03-10-2022_08:48:42] Powering On vesxi70-01.lab01.vlab.net ...
+[03-10-2022_08:48:42] Deploying Nested ESXi VM vesxi70-02.lab01.vlab.net ...
+[03-10-2022_08:49:53] Adding vmnic2/vmnic3 to tanzu-vtep ...
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 3    Vmxnet3         tanzu-vtep      00:50:56:a4:14:22      False
+
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 4    Vmxnet3         tanzu-vtep      00:50:56:a4:1f:37      False
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.o… failOpen             VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.o… failOpen             VM                   
+
+[03-10-2022_08:50:04] Updating vCPU Count to 4 & vMEM to 24 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-02.lab01.vl… PoweredOff 4        24.000
+
+[03-10-2022_08:50:05] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+16.000          Persistent           …2.lab01.vlab.net/vesxi70-02.lab01.vlab.net_1.vmdk
+
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+150.000         Persistent           …2.lab01.vlab.net/vesxi70-02.lab01.vlab.net_2.vmdk
+
+[03-10-2022_08:50:11] Powering On vesxi70-02.lab01.vlab.net ...
+[03-10-2022_08:50:11] Deploying Nested ESXi VM vesxi70-03.lab01.vlab.net ...
+[03-10-2022_08:51:28] Adding vmnic2/vmnic3 to tanzu-vtep ...
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 3    Vmxnet3         tanzu-vtep      00:50:56:a4:d7:91      False
+
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 4    Vmxnet3         tanzu-vtep      00:50:56:a4:c5:19      False
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.o… failOpen             VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.o… failOpen             VM                   
+
+[03-10-2022_08:51:39] Updating vCPU Count to 4 & vMEM to 24 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-03.lab01.vl… PoweredOff 4        24.000
+
+[03-10-2022_08:51:40] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+16.000          Persistent           …3.lab01.vlab.net/vesxi70-03.lab01.vlab.net_1.vmdk
+
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+150.000         Persistent           …3.lab01.vlab.net/vesxi70-03.lab01.vlab.net_2.vmdk
+
+[03-10-2022_08:51:46] Powering On vesxi70-03.lab01.vlab.net ...
+[03-10-2022_08:51:46] Deploying Nested ESXi VM vesxi70-04.lab01.vlab.net ...
+[03-10-2022_08:52:53] Adding vmnic2/vmnic3 to tanzu-vtep ...
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 3    Vmxnet3         tanzu-vtep      00:50:56:a4:97:fc      False
+
+
+[32;1mName                 Type            NetworkName     MacAddress         WakeOnLan[0m
+[32;1m                                                                          Enabled[0m
+[32;1m----                 ----            -----------     ----------         ---------[0m
+Network adapter 4    Vmxnet3         tanzu-vtep      00:50:56:a4:0d:2a      False
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet2.filter4.o… failOpen             VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.n… dvfilter-maclearn    VM                   
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+ethernet3.filter4.o… failOpen             VM                   
+
+[03-10-2022_08:53:05] Updating vCPU Count to 4 & vMEM to 24 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-04.lab01.vl… PoweredOff 4        24.000
+
+[03-10-2022_08:53:06] Updating vSAN Cache VMDK size to 16 GB & Capacity VMDK size to 150 GB ...
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+16.000          Persistent           …4.lab01.vlab.net/vesxi70-04.lab01.vlab.net_1.vmdk
+
+
+[32;1mCapacityGB      Persistence                                                    Filename[0m
+[32;1m----------      -----------                                                    --------[0m
+150.000         Persistent           …4.lab01.vlab.net/vesxi70-04.lab01.vlab.net_2.vmdk
+
+[03-10-2022_08:53:12] Powering On vesxi70-04.lab01.vlab.net ...
+[03-10-2022_08:53:12] Deploying NSX Manager VM nsxmgr3-01 ...
+[03-10-2022_09:14:33] Updating vCPU Count to 6 & vMEM to 24 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+nsxmgr3-01           PoweredOff 6        24.000
+
+[03-10-2022_09:14:34] Disabling vCPU Reservation ...
+
+[32;1mVM                   NumCpuShares    CpuSharesLevel  NumMemShares    MemSharesLevel[0m
+[32;1m--                   ------------    --------------  ------------    --------------[0m
+nsxmgr3-01           4000            Normal          163840          Normal
+
+[03-10-2022_09:14:36] Powering On nsxmgr3-01 ...
+[03-10-2022_09:14:36] Creating VCSA JSON Configuration file for deployment ...
+[03-10-2022_09:14:36] Deploying the VCSA ...
+Run the installer with "-v" or "--verbose" to log detailed information
+Updating log file location, copying 'C:\Users\souja\AppData\Local\Temp\vcsaCliInstaller-2022-03-11-02-14-fx6o8a1q\vcsa-cli-installer.log' to desired location as a backup: 'C:\Users\souja\AppData\Local\Temp\vcsaCliInstaller-2022-03-11-02-14-fx6o8a1q\workflow_1646964877340\vcsa-cli-installer.log.bak'
+Consuming the installer build:16998074
+Workflow log-dir
+C:\Users\souja\AppData\Local\Temp\vcsaCliInstaller-2022-03-11-02-14-fx6o8a1q\workflow_1646964877340
+====== [START] Start executing Task: To validate CLI options at 02:14:38 ======
+Command line arguments verfied.
+ [SUCCEEDED] Successfully executed Task 'CLIOptionsValidationTask: Executing CLI
+optionsValidation task' in TaskFlow 'template_validation' at 02:14:38
+ [START] Start executing Task: To validate the syntax of the template. at
+02:14:38
+Template syntax validation for template
+'C:\Users\souja\AppData\Local\Temp\jsontemplate.json' succeeded.
+Syntax validation for all templates succeeded.
+ [SUCCEEDED] Successfully executed Task 'SyntaxValidationTask: Executing
+Template Syntax Validation task' in TaskFlow 'template_validation' at 02:14:38
+ [START] Start executing Task: To check the version of each template, and for
+each older template that supports CEIP, convert it to the latest template
+format, and save it to the Template Blackboard at 02:14:38
+Template version processing for template
+'C:\Users\souja\AppData\Local\Temp\jsontemplate.json' succeeded.
+Version processing for all templates succeeded.
+ [SUCCEEDED] Successfully executed Task 'VersionProcessingTask: Executing
+Template Version Processing task' in TaskFlow 'template_validation' at 02:14:38
+ [START] Start executing Task: To validate the template structure against the
+rules specified by a corresponding template schema. at 02:14:38
+Template structure validation for template
+'C:\Users\souja\AppData\Local\Temp\jsontemplate.json' succeeded.
+Structure validation for all templates succeeded.
+ [SUCCEEDED] Successfully executed Task 'StructureValidationTask: Executing
+Template Structure Validation task' in TaskFlow 'template_validation' at
+02:14:38
+ [START] Start executing Task: To create a dependency graph for the provided
+templates, with an edge pairing two templates that are dependent on each other.
+Such graph relationships will affect whether certain templates can be deployed
+in parallel, or must be deployed sequentially. at 02:14:38
+Dependency processing for all templates succeeded.
+ [SUCCEEDED] Successfully executed Task 'DependencyProcessingTask: Executing
+Template Dependency Processing task' in TaskFlow 'template_validation' at
+02:14:38
+ [START] Start executing Task: Validate that requirements are met in the source
+VCSA. at 02:14:41
+InstallRequirementCollector: Reached gathering requirement
+ [SUCCEEDED] Successfully executed Task 'SrcRequirementTask: Running
+SrcRequirementTask' in TaskFlow 'jsontemplate' at 02:14:41
+====== [START] Start executing Task: Perform precheck tasks. at 02:14:45 ======
+ [START] Start executing Task: Verify that the provided credentials for the
+target ESXi/VC are valid at 02:14:48
+The certificate of server 'vc01.sil.net' will not be verified because you have
+provided either the '--no-ssl-certificate-verification' or '--no-esx-ssl-verify'
+command parameter, which disables verification for all certificates. Remove this
+parameter from the command line if you want server certificates to be verified.
+ [SUCCEEDED] Successfully executed Task 'Running precheck: TargetCredentials' in
+TaskFlow 'install' at 02:14:48
+ [START] Start executing Task: Verify the target host type matches the one given
+in the template at 02:14:52
+ [SUCCEEDED] Successfully executed Task 'Running precheck: TargetHostType' in
+TaskFlow 'install' at 02:14:52
+ [START] Start executing Task: Verify that the target ESXi or VC version meets
+the minimum requirements at 02:14:54
+ [SUCCEEDED] Successfully executed Task 'Running precheck: TargetVersion' in
+TaskFlow 'install' at 02:14:54
+ [START] Start executing Task: Validate that the OVA image has the required OVA
+properties. at 02:14:56
+ [SUCCEEDED] Successfully executed Task 'Running precheck: OVAProperties.' in
+TaskFlow 'install' at 02:14:57
+ [START] Start executing Task: Validate the provided ip/fqdn is available to use
+at 02:14:59
+Pinging IPv4 address 192.168.50.20
+Time-out pinging 192.168.50.20.
+Pinging IPv4 address vc01.lab01.vlab.net
+Time-out pinging vc01.lab01.vlab.net.
+ [SUCCEEDED] Successfully executed Task 'Running precheck: IpFqdnInUse' in
+TaskFlow 'install' at 02:15:17
+ [SUCCEEDED] Successfully executed Task 'Running precheck:
+LinkingTargetHostnameValidation' in TaskFlow 'install' at 02:15:19
+ [START] Start executing Task: Validate the target ESXi management status at
+02:15:21
+ [SUCCEEDED] Successfully executed Task 'Running precheck: ESXManagementStatus'
+in TaskFlow 'install' at 02:15:21
+ [START] Start executing Task: Precheck CPU, memory and datastore size
+requirements for a host. at 02:15:23
+ [SUCCEEDED] Successfully executed Task 'Running precheck: HostConfigs' in
+TaskFlow 'install' at 02:15:25
+ [START] Start executing Task: Validate the provided target appliance name is
+available to use at 02:15:27
+ [SUCCEEDED] Successfully executed Task 'Running precheck: ApplianceName' in
+TaskFlow 'install' at 02:15:27
+================== [START] Start executing Task:  at 02:15:30 ==================
+= [SUCCEEDED] Successfully executed Task '' in TaskFlow 'install' at 02:15:30 =
+ [START] Start executing Task: Check whether the datastore's free space
+accommodate the VCSA's deployment option at 02:15:32
+ [SUCCEEDED] Successfully executed Task 'Running precheck: TargetDsFreespace' in
+TaskFlow 'install' at 02:15:32
+ [START] Start executing Task: Verify the provided SSO info is valid by
+connecting to the STS service. at 02:15:34
+ [SUCCEEDED] Successfully executed Task 'Running precheck: SSOCredentials' in
+TaskFlow 'install' at 02:15:34
+ [START] Start executing Task: Verify that the provided external SSO
+(PSC)/Embedded info is valid at 02:15:37
+ [SUCCEEDED] Successfully executed Task 'Running precheck: SSOExternal' in
+TaskFlow 'install' at 02:15:37
+ [SUCCEEDED] Successfully executed Task 'PrecheckTask: Running prechecks.' in
+TaskFlow 'jsontemplate' at 02:15:38
+ [START] Start executing Task: Invoke OVF Tool to deploy VCSA for installation,
+upgrade, and migration at 02:15:41
+OVF Tool: Opening OVA source:
+C:\Users\souja\OneDrive\Documents\GitHub\vsphere-with-tanzu-nsxt-automated-lab-deployment\tanzu\VMware-VCSA-all-7.0.1-17491101\vcsa-cli-installer\win32\..\..\vcsa\VMware-vCenter-Server-Appliance-7.0.1.00300-17491101_OVF10.ova
+OVF Tool:  The manifest validates
+OVF Tool:  The provided certificate is in valid period
+OVF Tool: Source is signed but could not verify certificate (possibly
+self-signed)
+OVF Tool:  Certificate information:
+OVF Tool:    CertIssuer:/C=US/ST=California/L=Palo Alto/O=VMware, Inc.
+OVF Tool:    CertSubject:/C=US/ST=California/L=Palo Alto/O=VMware, Inc.
+OVF Tool:    -----BEGIN CERTIFICATE-----
+OVF Tool:    MIIDyzCCArOgAwIBAgIJAIR/y018RgMXMA0GCSqGSIb3DQEBCwUAME0xCzAJBgNV
+OVF Tool:    BAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRIwEAYDVQQHDAlQYWxvIEFsdG8x
+OVF Tool:    FTATBgNVBAoMDFZNd2FyZSwgSW5jLjAeFw0xNjA5MDgwMTE3MjFaFw0yOTEyMzEw
+OVF Tool:    MTE3MjFaME0xCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRIwEAYD
+OVF Tool:    VQQHDAlQYWxvIEFsdG8xFTATBgNVBAoMDFZNd2FyZSwgSW5jLjCCASAwDQYJKoZI
+OVF Tool:    hvcNAQEBBQADggENADCCAQgCggEBALU9NUtC39fqG7yo2XAswUmtli9uA+31uAMw
+OVF Tool:    9FFHAEv/it8pzBQZ/4r+2bN+GnXOWhuDd1K4ApKMRvoO4LwQfZxrkx4pXrsu0gdb
+OVF Tool:    4OunHw0D8MrdzSoob8Js/uq+IJ+8Bhsc6b7RzTUt9HeDWzHasAJVgMsjehGt23ay
+OVF Tool:    9FKOT6dVD6D/Xi3qJnB/4t/XNS6L63dC3ea4guzKDyLaXIP5bf/m56jvVImFjhhT
+OVF Tool:    W2ASbnEUlZIVrEuyVcdG7e3FvZufE553JmHL0YG/0m5bIHXKRzBRx0D3HHOAzOKw
+OVF Tool:    kkOnxJHSTN4Hz8hSYCWvzUAjSYL3Q8qiTd7GHJ2ynsRnu3KlzKUCAQOjga8wgaww
+OVF Tool:    HQYDVR0OBBYEFHg8KQJdm8NPQDmYP41uEgKG+VNwMH0GA1UdIwR2MHSAFHg8KQJd
+OVF Tool:    m8NPQDmYP41uEgKG+VNwoVGkTzBNMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2Fs
+OVF Tool:    aWZvcm5pYTESMBAGA1UEBwwJUGFsbyBBbHRvMRUwEwYDVQQKDAxWTXdhcmUsIElu
+OVF Tool:    Yy6CCQCEf8tNfEYDFzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAD
+OVF Tool:    K9uUhsXzpuUcWJq83Vh2HHSxZ/DdR6h+FNYHfEX8h8DOIwhRHhIHoqXkwwnpbjip
+OVF Tool:    FBtSzNKzTmzMQBwB7GwzGSsBO2TU8alX2ssnDg2AqwgIeLzclfaQlYoid678Krew
+OVF Tool:    nFryr9PYMntr7uyU1duesmey12GS2z5UIhA4BaOnrPJcLCP22nXVlPEsa46ob7XH
+OVF Tool:    j4ngZ0ck/qE58Z90GaAuxaa2R3OlHQ+AhXc3q5IixqMDa0MLPd41Qv2kC5iZ+tCf
+OVF Tool:    XVdlf4/RqQBNHR8FFVxcjpaROId9Y9/yHdsMt55nN7pf7vRf5vSk1bHvLmlOYgiR
+OVF Tool:    tAj6rdPq0c+/C+fct1cM
+OVF Tool:    -----END CERTIFICATE-----
+OVF Tool:  Opening VI target:
+vi://administrator%40vsphere.local@vc01.sil.net:443/sil.net/host/pesxi
+OVF Tool:  Deploying to VI:
+vi://administrator%40vsphere.local@vc01.sil.net:443/sil.net/host/pesxi
+
+OVF Tool: Disk progress: 1%
+OVF Tool: Disk progress: 2%
+OVF Tool: Disk progress: 3%
+OVF Tool: Disk progress: 4%
+OVF Tool: Disk progress: 5%
+OVF Tool: Disk progress: 6%
+OVF Tool: Disk progress: 7%
+OVF Tool: Disk progress: 8%
+OVF Tool: Disk progress: 9%
+OVF Tool: Disk progress: 10%
+OVF Tool: Disk progress: 11%
+OVF Tool: Disk progress: 12%
+OVF Tool: Disk progress: 13%
+OVF Tool: Disk progress: 14%
+OVF Tool: Disk progress: 15%
+OVF Tool: Disk progress: 16%
+OVF Tool: Disk progress: 17%
+OVF Tool: Disk progress: 18%
+OVF Tool: Disk progress: 19%
+OVF Tool: Disk progress: 20%
+OVF Tool: Disk progress: 21%
+OVF Tool: Disk progress: 22%
+OVF Tool: Disk progress: 23%
+OVF Tool: Disk progress: 24%
+OVF Tool: Disk progress: 25%
+OVF Tool: Disk progress: 26%
+OVF Tool: Disk progress: 27%
+OVF Tool: Disk progress: 28%
+OVF Tool: Disk progress: 29%
+OVF Tool: Disk progress: 30%
+OVF Tool: Disk progress: 31%
+OVF Tool: Disk progress: 32%
+OVF Tool: Disk progress: 33%
+OVF Tool: Disk progress: 34%
+OVF Tool: Disk progress: 35%
+OVF Tool: Disk progress: 36%
+OVF Tool: Disk progress: 37%
+OVF Tool: Disk progress: 38%
+OVF Tool: Disk progress: 39%
+OVF Tool: Disk progress: 40%
+OVF Tool: Disk progress: 41%
+OVF Tool: Disk progress: 42%
+OVF Tool: Disk progress: 43%
+OVF Tool: Disk progress: 44%
+OVF Tool: Disk progress: 45%
+OVF Tool: Disk progress: 46%
+OVF Tool: Disk progress: 47%
+OVF Tool: Disk progress: 48%
+OVF Tool: Disk progress: 49%
+OVF Tool: Disk progress: 50%
+OVF Tool: Disk progress: 51%
+OVF Tool: Disk progress: 52%
+OVF Tool: Disk progress: 53%
+OVF Tool: Disk progress: 54%
+OVF Tool: Disk progress: 55%
+OVF Tool: Disk progress: 56%
+OVF Tool: Disk progress: 57%
+OVF Tool: Disk progress: 58%
+OVF Tool: Disk progress: 59%
+OVF Tool: Disk progress: 60%
+OVF Tool: Disk progress: 61%
+OVF Tool: Disk progress: 62%
+OVF Tool: Disk progress: 63%
+OVF Tool: Disk progress: 64%
+OVF Tool: Disk progress: 65%
+OVF Tool: Disk progress: 66%
+OVF Tool: Disk progress: 67%
+OVF Tool: Disk progress: 68%
+OVF Tool: Disk progress: 69%
+OVF Tool: Disk progress: 70%
+OVF Tool: Disk progress: 71%
+OVF Tool: Disk progress: 72%
+OVF Tool: Disk progress: 73%
+OVF Tool: Disk progress: 74%
+OVF Tool: Disk progress: 75%
+OVF Tool: Disk progress: 76%
+OVF Tool: Disk progress: 77%
+OVF Tool: Disk progress: 78%
+OVF Tool: Disk progress: 79%
+OVF Tool: Disk progress: 80%
+OVF Tool: Disk progress: 81%
+OVF Tool: Disk progress: 82%
+OVF Tool: Disk progress: 83%
+OVF Tool: Disk progress: 84%
+OVF Tool: Disk progress: 85%
+OVF Tool: Disk progress: 86%
+OVF Tool: Disk progress: 87%
+OVF Tool: Disk progress: 88%
+OVF Tool: Disk progress: 89%
+OVF Tool: Disk progress: 90%
+OVF Tool: Disk progress: 91%
+OVF Tool: Disk progress: 92%
+OVF Tool: Disk progress: 93%
+OVF Tool: Disk progress: 94%
+OVF Tool: Disk progress: 95%
+OVF Tool: Disk progress: 96%
+OVF Tool: Disk progress: 97%
+OVF Tool: Disk progress: 98%
+OVF Tool: Disk progress: 99%
+
+OVF Tool: Transfer Completed
+OVF Tool:  Powering on VM: vc01-lab01-vlab-net
+
+OVF Tool: Task progress: 33%
+OVF Tool: Task progress: 66%
+OVF Tool: Task progress: 100%
+
+OVF Tool: Task Completed
+OVF Tool:  Waiting for IP address...
+OVF Tool: Received IP address: fe80::250:56ff:fea4:e2cb
+OVF Tool:  Completed successfully
+ [SUCCEEDED] Successfully executed Task 'Deploying vCenter Server Appliance' in
+TaskFlow 'jsontemplate' at 02:29:37
+ [START] Start executing Task: Monitor the entire VCSA deployment using
+appliance REST API at 02:29:39
+Checking if the target VCSA is powered on and ready for operations...
+Successfully verified that the target VCSA 'vc01-lab01-vlab-net' has been
+powered on and is now ready for operations
+Checking if the target VCSA appliance API is available for query
+The certificate of server '[fe80::250:56ff:fea4:e2cb]' will not be verified
+because you have provided either the '--no-ssl-certificate-verification' or
+'--no-esx-ssl-verify' command parameter, which disables verification for all
+certificates. Remove this parameter from the command line if you want server
+certificates to be verified.
+The certificate of server '192.168.50.20' will not be verified because you have
+provided either the '--no-ssl-certificate-verification' or '--no-esx-ssl-verify'
+command parameter, which disables verification for all certificates. Remove this
+parameter from the command line if you want server certificates to be verified.
+Successfully verified that the target VCSA appliance API is available for query
+Start monitoring target VCSA deployment, deployment status will be written into:
+C:\Users\souja\AppData\Local\Temp\vcsaCliInstaller-2022-03-11-02-14-fx6o8a1q\workflow_1646964877340\jsontemplate\vcsa_deployment.json
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 51/100)  - Installed
+cis-upgrade-runner-7.0.1-17491101.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 57/100)  - Installed
+vmware-certificate-server-7.0.1.9466-17260200.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 76/100)  - Installed
+VMware-hvc-7.0.1-17491161.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 82/100)  - Installed
+VMware-vsan-health-7.0.1-17491101.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 85/100)  - Installed
+VMware-wcp-0.0.6-17201796.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(RUNNING 85/100)  - Installed
+VMware-wcp-0.0.6-17201796.x86_64.rpm
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 4/100)     - Starting
+VMware Authentication Framework...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 12/100)    - Starting
+dbconfig...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 22/100)    - Starting
+VMware Security Token Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 22/100)    - Starting
+VMware Security Token Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 28/100)    - Starting
+VMware License Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 32/100)    - Starting
+VMware vAPI Endpoint...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 36/100)    - Starting
+VMware vCenter-Services...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 46/100)    - Starting
+VMware VCSA Observability VAPI Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 57/100)    - Starting
+VMware Trust Management Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 59/100)    - Starting
+VMware vCenter Server...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 65/100)    - Starting
+VMware ESX Agent Manager...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 67/100)    - Starting
+VMware Hybrid VC Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 67/100)    - Starting
+VMware Hybrid VC Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 69/100)    - Starting
+VMware vSphere Profile-Driven Storage Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 71/100)    - Starting
+VMware Update Manager...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 79/100)    - Starting
+VMware VSAN Health Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 81/100)    - Starting
+VMware vService Manager...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 83/100)    - Starting
+VMware vTsdb Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 89/100)    - Starting
+Workload Control Plane...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 91/100)    - Starting
+VMware Content Library Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 91/100)    - Starting
+VMware Content Library Service...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(RUNNING 97/100)    - Starting
+VMware Performance Charts...
+VCSA Deployment is still running
+==========VCSA Deployment Progress Report==========         Task: Install
+required RPMs for the appliance.(SUCCEEDED 100/100)       - Task has completed
+successfully.         Task: Run firstboot scripts.(SUCCEEDED 100/100) - Task has
+completed successfully.
+Successfully completed VCSA deployment.  VCSA Deployment Start Time:
+2022-03-11T02:28:53.565Z VCSA Deployment End Time: 2022-03-11T02:44:18.321Z
+ [SUCCEEDED] Successfully executed Task 'MonitorDeploymentTask: Monitoring
+Deployment' in TaskFlow 'jsontemplate' at 02:44:46
+Monitoring VCSA Deploy task completed
+The certificate of server 'vc01.lab01.vlab.net' will not be verified because you
+have provided either the '--no-ssl-certificate-verification' or
+'--no-esx-ssl-verify' command parameter, which disables verification for all
+certificates. Remove this parameter from the command line if you want server
+certificates to be verified.
+== [START] Start executing Task: Join active domain if necessary at 02:44:49 ==
+Domain join task not applicable, skipping task
+ [SUCCEEDED] Successfully executed Task 'Running deployment: Domain Join' in
+TaskFlow 'jsontemplate' at 02:44:49
+ [START] Start executing Task: Provide the login information about new
+appliance. at 02:44:53
+    Appliance Name: vc01-lab01-vlab-net
+    System Name: vc01.lab01.vlab.net
+    System IP: 192.168.50.20
+    Log in as: Administrator@vsphere.local
+ [SUCCEEDED] Successfully executed Task 'ApplianceLoginSummaryTask: Provide
+appliance login information.' in TaskFlow 'jsontemplate' at 02:44:53
+=================================== 02:44:56 ===================================
+Result and Log File Information...
+WorkFlow log directory:
+C:\Users\souja\AppData\Local\Temp\vcsaCliInstaller-2022-03-11-02-14-fx6o8a1q\workflow_1646964877340
+[03-10-2022_09:44:56] Setting up NSX-T Edge to join NSX-T Management Plane ...
+[03-10-2022_09:45:50] Successfully logged into NSX-T Manager nsxmgr01.lab01.vlab.net  ...
+[03-10-2022_09:45:50] Retrieving NSX Manager Thumbprint ...
+[03-10-2022_09:45:50] Accepting NSX Manager EULA ...
+[03-10-2022_09:45:50] Disconnecting from NSX-T Manager ...
+[03-10-2022_09:45:50] Deploying NSX Edge VM tanzu-nsx-edge-01 ...
+[03-10-2022_09:50:30] Updating vCPU Count to 8 & vMEM to 32 GB ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+tanzu-nsx-edge-01    PoweredOff 8        32.000
+
+[03-10-2022_09:50:31] Powering On tanzu-nsx-edge-01 ...
+[03-10-2022_09:50:31] Creating vApp Nested-vSphere-with-Tanzu-NSX-T-Lab-KyUTwJdo ...
+[03-10-2022_09:50:32] Moving Nested ESXi VMs into Nested-vSphere-with-Tanzu-NSX-T-Lab-KyUTwJdo vApp ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-01.lab01.vl… PoweredOn  4        24.000
+
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-02.lab01.vl… PoweredOn  4        24.000
+
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-03.lab01.vl… PoweredOn  4        24.000
+
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vesxi70-04.lab01.vl… PoweredOn  4        24.000
+
+[03-10-2022_09:50:38] Moving vc01-lab01-vlab-net into Nested-vSphere-with-Tanzu-NSX-T-Lab-KyUTwJdo vApp ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+vc01-lab01-vlab-net  PoweredOn  2        12.000
+
+[03-10-2022_09:50:40] Moving nsxmgr3-01 into Nested-vSphere-with-Tanzu-NSX-T-Lab-KyUTwJdo vApp ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+nsxmgr3-01           PoweredOn  6        24.000
+
+[03-10-2022_09:50:41] Moving NSX Edge VMs into Nested-vSphere-with-Tanzu-NSX-T-Lab-KyUTwJdo vApp ...
+
+[32;1mName                 PowerState Num CPUs MemoryGB[0m
+[32;1m----                 ---------- -------- --------[0m
+tanzu-nsx-edge-01    PoweredOn  8        32.000
+
+[03-10-2022_09:50:43] Moving Nested-vSphere-with-Tanzu-NSX-T-Lab-KyUTwJdo to VM Folder Tanzu ...
+
+[32;1mName                 Status    CpuSharesL CpuReserva CpuLimitMh MemSharesL MemReservationG      MemLimitGB[0m
+[32;1m                                     evel    tionMhz          z       evel               B[0m
+[32;1m----                 ------    ---------- ---------- ---------- ---------- ---------------      ----------[0m
+Nested-vSphere-with… Started       Normal          0         -1     Normal           0.000          -1.000
+
+[03-10-2022_09:50:44] Disconnecting from vc01.sil.net ...
+[03-10-2022_09:50:45] Connecting to the new VCSA ...
+[03-10-2022_09:50:45] Creating Datacenter Tanzu-Datacenter ...
+
+[32;1mName[0m
+[32;1m----[0m
+Tanzu-Datacenter
+
+[03-10-2022_09:50:46] Creating VSAN Cluster Workload-Cluster ...
+
+[32;1mName                           HAEnabled  HAFailover DrsEnabled DrsAutomationLevel[0m
+[32;1m                                          Level[0m
+[32;1m----                           ---------  ---------- ---------- ------------------[0m
+Workload-Cluster               True       1          True       FullyAutomated
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+das.ignoreRedundant… True                 ClusterHA            
+
+[03-10-2022_09:50:48] Adding ESXi host vesxi70-01.lab01.vlab.net to Cluster ...
+
+[32;1mName                 ConnectionState PowerState NumCpu CpuUsageMhz CpuTotalMhz   MemoryUsageGB   MemoryTotalGB Version[0m
+[32;1m----                 --------------- ---------- ------ ----------- -----------   -------------   ------------- -------[0m
+vesxi70-01.lab01.vl… Connected       PoweredOn       4           0        9196           0.000          23.999   7.0.1
+
+[03-10-2022_09:50:58] Adding ESXi host vesxi70-02.lab01.vlab.net to Cluster ...
+
+[32;1mName                 ConnectionState PowerState NumCpu CpuUsageMhz CpuTotalMhz   MemoryUsageGB   MemoryTotalGB Version[0m
+[32;1m----                 --------------- ---------- ------ ----------- -----------   -------------   ------------- -------[0m
+vesxi70-02.lab01.vl… Connected       PoweredOn       4           0        9196           0.000          23.999   7.0.1
+
+[03-10-2022_09:51:07] Adding ESXi host vesxi70-03.lab01.vlab.net to Cluster ...
+
+[32;1mName                 ConnectionState PowerState NumCpu CpuUsageMhz CpuTotalMhz   MemoryUsageGB   MemoryTotalGB Version[0m
+[32;1m----                 --------------- ---------- ------ ----------- -----------   -------------   ------------- -------[0m
+vesxi70-03.lab01.vl… Connected       PoweredOn       4           0        9196           0.000          23.999   7.0.1
+
+[03-10-2022_09:51:18] Adding ESXi host vesxi70-04.lab01.vlab.net to Cluster ...
+
+[32;1mName                 ConnectionState PowerState NumCpu CpuUsageMhz CpuTotalMhz   MemoryUsageGB   MemoryTotalGB Version[0m
+[32;1m----                 --------------- ---------- ------ ----------- -----------   -------------   ------------- -------[0m
+vesxi70-04.lab01.vl… Connected       PoweredOn       4           0        9196           0.000          23.999   7.0.1
+
+[03-10-2022_09:51:29] Enabling VSAN & disabling VSAN Health Check ...
+
+[32;1mCluster              VsanEnabled  IsStretchedCluster   Last HCL Updated[0m
+[32;1m-------              -----------  ------------------   ----------------[0m
+Workload-Cluster     True         False                3/8/2022 4:25:00 PM
+
+[03-10-2022_09:51:47] Querying ESXi host disks to create VSAN Diskgroups ...
+[03-10-2022_09:51:47] Creating VSAN DiskGroup for vesxi70-01.lab01.vlab.net ...
+
+[32;1mName                                               VMHost               DiskGroupType[0m
+[32;1m----                                               ------               -------------[0m
+Disk group (02000000006000c293d3aaa48f9f620de577a… vesxi70-01.lab01.vl… AllFlash
+
+[03-10-2022_09:52:20] Querying ESXi host disks to create VSAN Diskgroups ...
+[03-10-2022_09:52:20] Creating VSAN DiskGroup for vesxi70-02.lab01.vlab.net ...
+
+[32;1mName                                               VMHost               DiskGroupType[0m
+[32;1m----                                               ------               -------------[0m
+Disk group (02000000006000c29bda7cdfddbf315276c8a… vesxi70-02.lab01.vl… AllFlash
+
+[03-10-2022_09:52:53] Querying ESXi host disks to create VSAN Diskgroups ...
+[03-10-2022_09:52:53] Creating VSAN DiskGroup for vesxi70-03.lab01.vlab.net ...
+
+[32;1mName                                               VMHost               DiskGroupType[0m
+[32;1m----                                               ------               -------------[0m
+Disk group (02000000006000c29a9ba82593169f1f89bab… vesxi70-03.lab01.vl… AllFlash
+
+[03-10-2022_09:53:25] Querying ESXi host disks to create VSAN Diskgroups ...
+[03-10-2022_09:53:25] Creating VSAN DiskGroup for vesxi70-04.lab01.vlab.net ...
+
+[32;1mName                                               VMHost               DiskGroupType[0m
+[32;1m----                                               ------               -------------[0m
+Disk group (02000000006000c29f0d55f3ffc1ed1e717e2… vesxi70-04.lab01.vl… AllFlash
+
+
+[32;1mName                           NumPorts PortBinding[0m
+[32;1m----                           -------- -----------[0m
+DVPG-Management Network        128      Static
+
+[03-10-2022_09:54:00] Adding vesxi70-01.lab01.vlab.net to Tanzu-VDS
+[03-10-2022_09:54:04] Adding vesxi70-02.lab01.vlab.net to Tanzu-VDS
+[03-10-2022_09:54:08] Adding vesxi70-03.lab01.vlab.net to Tanzu-VDS
+[03-10-2022_09:54:11] Adding vesxi70-04.lab01.vlab.net to Tanzu-VDS
+[03-10-2022_09:54:15] Clearing default VSAN Health Check Alarms, not applicable in Nested ESXi env ...
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+UserVars.SuppressCo… 1                    VMHost               
+
+
+[32;1mName       Mac               DhcpEnabled IP              SubnetMask      DeviceName[0m
+[32;1m----       ---               ----------- --              ----------      ----------[0m
+vmk0       00:50:56:a4:c9:21 False       192.168.50.21   255.255.255.0         vmk0
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+UserVars.SuppressCo… 1                    VMHost               
+
+
+[32;1mName       Mac               DhcpEnabled IP              SubnetMask      DeviceName[0m
+[32;1m----       ---               ----------- --              ----------      ----------[0m
+vmk0       00:50:56:a4:92:7e False       192.168.50.22   255.255.255.0         vmk0
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+UserVars.SuppressCo… 1                    VMHost               
+
+
+[32;1mName       Mac               DhcpEnabled IP              SubnetMask      DeviceName[0m
+[32;1m----       ---               ----------- --              ----------      ----------[0m
+vmk0       00:50:56:a4:e2:1a False       192.168.50.23   255.255.255.0         vmk0
+
+
+[32;1mName                 Value                Type                 Description[0m
+[32;1m----                 -----                ----                 -----------[0m
+UserVars.SuppressCo… 1                    VMHost               
+
+
+[32;1mName       Mac               DhcpEnabled IP              SubnetMask      DeviceName[0m
+[32;1m----       ---               ----------- --              ----------      ----------[0m
+vmk0       00:50:56:a4:de:02 False       192.168.50.24   255.255.255.0         vmk0
+
+[03-10-2022_09:54:36] Creating Tanzu Storage Policies and attaching to vsanDatastore ...
+
+[32;1mName                                     Cardinality Description[0m
+[32;1m----                                     ----------- -----------[0m
+tanzu-demo-tag-category                  Single      
+
+
+[32;1mName                           Category                       Description[0m
+[32;1m----                           --------                       -----------[0m
+tanzu-demo-storage             tanzu-demo-tag-category        
+
+
+[32;1mTag                                      Entity[0m
+[32;1m---                                      ------[0m
+tanzu-demo-tag-category/tanzu-demo-stor… vsanDatastore
+
+
+[32;1mName                 Description                           Rule Sets                      Common Rules[0m
+[32;1m----                 -----------                           ---------                      ------------[0m
+tanzu-gold-storage-…                                       {(tanzu-demo-storage)}         {}
+
+[03-10-2022_09:54:47] Creating TKG Subscribed Content Library TKG-Content-Library ...
+
+[32;1mName                                                                                     Type       Published Password[0m
+[32;1m                                                                                                              Protected[0m
+[32;1m----                                                                                     ----       --------- ----------[0m
+TKG-Content-Library                                                                      Subscribed           False
+
+[03-10-2022_09:54:51] Disconnecting from new VCSA ...
+[03-10-2022_09:54:51] Connecting to NSX-T Manager for post-deployment configuration ...
+[03-10-2022_09:55:46] Successfully logged into NSX-T Manager nsxmgr01.lab01.vlab.net  ...
+[03-10-2022_09:55:46] Verifying health of all NSX Manager/Controller Nodes ...
+[03-10-2022_09:55:46] Check health status of Mgmt Node 192.168.50.26 ...
+[03-10-2022_09:55:46] Checking health of Ctrl Node 192.168.50.26 ...
+[03-10-2022_09:55:46] Accepting CEIP Agreement ...
+[03-10-2022_09:55:46] Adding vCenter Server Compute Manager ...
+[03-10-2022_09:55:55] Waiting for VC registration to complete ...
+[03-10-2022_09:55:55] vc01.lab01.vlab.net is not ready, sleeping 30 seconds ...
+[03-10-2022_09:56:26] Creating Tunnel Endpoint IP Pool ...
+[03-10-2022_09:56:26] Creating Overlay & VLAN Transport Zones ...
+[03-10-2022_09:56:26] Creating ESXi Uplink Profile ...
+[03-10-2022_09:56:26] Creating Edge Uplink Profile ...
+URL: https://nsxmgr01.lab01.vlab.net/api/v1/transport-node-profiles
+Headers: 
+[32;1mName                           Value[0m
+[32;1m----                           -----[0m
+Content-Type                   application/json
+Accept                         application/json
+Authorization                  basic YWRtaW46Vk13YXJlMSFWTXdhcmUxIQ==
+
+
+Body: {
+  "resource_type": "TransportNode",
+  "display_name": "Tanzu-Host-Transport-Node-Profile",
+  "host_switch_spec": {
+    "host_switches": [
+      {
+        "host_switch_name": "nsxswitch",
+        "host_switch_mode": "STANDARD",
+        "host_switch_type": "VDS",
+        "host_switch_id": "50 06 bc bd 4c a1 c4 ab-7b 5a 63 6f 4e 0b d6 fc",
+        "uplinks": [
+          {
+            "vds_uplink_name": "uplink1",
+            "uplink_name": "uplink1"
+          }
+        ],
+        "ip_assignment_spec": {
+          "resource_type": "StaticIpPoolSpec",
+          "ip_pool_id": "d42f3ca3-1240-4c52-994d-9f3f575a0d04"
+        },
+        "host_switch_profile_ids": [
+          {
+            "value": "f468ede6-f7f9-4fd0-9a40-645075f39eae",
+            "key": "UplinkHostSwitchProfile"
+          }
+        ],
+        "transport_zone_endpoints": [
+          {
+            "transport_zone_id": "443f6b31-a6ca-49c8-b146-29aae0e5225e"
+          }
+        ]
+      }
+    ],
+    "resource_type": "StandardHostSwitchSpec"
+  }
+}
+[03-10-2022_09:56:28] Creating Transport Node Profile Tanzu-Host-Transport-Node-Profile ...
+[03-10-2022_09:56:28] Successfully Created Transport Node Profile
+[03-10-2022_09:56:28] Applying Transport Node Profile to ESXi Transport Nodes ...
+[03-10-2022_09:56:32] Waiting for ESXi transport node configurations to complete ...
+[03-10-2022_09:56:32] ESXi transport node is still being configured (6% Completed), sleeping for 30 seconds ...
+[03-10-2022_09:57:02] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_09:57:33] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_09:58:03] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_09:58:33] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_09:59:03] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_09:59:33] ESXi transport node is still being configured (18% Completed), sleeping for 30 seconds ...
+[03-10-2022_10:00:04] ESXi transport node is still being configured (48% Completed), sleeping for 30 seconds ...
+[03-10-2022_10:00:34] ESXi transport node is still being configured (48% Completed), sleeping for 30 seconds ...
+[03-10-2022_10:01:04] ESXi transport node is still being configured (48% Completed), sleeping for 30 seconds ...
+[03-10-2022_10:01:35] ESXi transport node is still being configured (48% Completed), sleeping for 30 seconds ...
+[03-10-2022_10:02:05] ESXi transport node is still being configured (48% Completed), sleeping for 30 seconds ...
+[03-10-2022_10:02:35] ESXi transport node is still being configured (92% Completed), sleeping for 30 seconds ...
+URL: https://nsxmgr01.lab01.vlab.net/api/v1/transport-nodes
+Headers: 
+[32;1mName                           Value[0m
+[32;1m----                           -----[0m
+Content-Type                   application/json
+Accept                         application/json
+Authorization                  basic YWRtaW46Vk13YXJlMSFWTXdhcmUxIQ==
+
+
+Body: {
+  "resource_type": "TransportNode",
+  "node_id": "3e4a3be4-a0e6-11ec-b9ae-005056a49e6e",
+  "display_name": "tanzu-nsx-edge-01.lab01.vlab.net",
+  "host_switch_spec": {
+    "host_switches": [
+      {
+        "host_switch_name": "nsxswitch",
+        "host_switch_mode": "STANDARD",
+        "ip_assignment_spec": {
+          "resource_type": "StaticIpPoolSpec",
+          "ip_pool_id": "d42f3ca3-1240-4c52-994d-9f3f575a0d04"
+        },
+        "pnics": [
+          {
+            "uplink_name": "uplink1",
+            "device_name": "fp-eth1"
+          }
+        ],
+        "host_switch_profile_ids": [
+          {
+            "value": "f468ede6-f7f9-4fd0-9a40-645075f39eae",
+            "key": "UplinkHostSwitchProfile"
+          }
+        ],
+        "transport_zone_endpoints": [
+          {
+            "transport_zone_id": "443f6b31-a6ca-49c8-b146-29aae0e5225e"
+          }
+        ]
+      },
+      {
+        "host_switch_name": "edgeswitch",
+        "host_switch_mode": "STANDARD",
+        "pnics": [
+          {
+            "uplink_name": "tep-uplink",
+            "device_name": "fp-eth2"
+          }
+        ],
+        "ip_assignment_spec": {
+          "resource_type": "AssignedByDhcp"
+        },
+        "host_switch_profile_ids": [
+          {
+            "value": "eced3f15-5fe2-4f95-8954-7b3c48fd5b3a",
+            "key": "UplinkHostSwitchProfile"
+          }
+        ],
+        "transport_zone_endpoints": [
+          {
+            "transport_zone_id": "dd6bdd47-56ff-4c4d-a2da-aad8c07cf677"
+          }
+        ]
+      }
+    ],
+    "resource_type": "StandardHostSwitchSpec"
+  }
+}
+[03-10-2022_10:03:06] Creating NSX-T Edge Transport Node for tanzu-nsx-edge-01.lab01.vlab.net ...
+[03-10-2022_10:03:06] Successfully Created NSX-T Edge Transport Node 
+[03-10-2022_10:03:06] Waiting for Edge transport node configurations to complete ...
+[03-10-2022_10:03:06] Edge transport node is still being configured, sleeping for 30 seconds ...
+[03-10-2022_10:03:36] Creating Edge Cluster Edge-Cluster-01 and adding Edge Hosts ...
+[03-10-2022_10:03:36] Edge Cluster has not been realized, sleeping for 10 seconds ...
+[03-10-2022_10:03:47] Edge Cluster has been realized
+[03-10-2022_10:03:47] Creating Network Segment Tanzu-Segment ...
+[03-10-2022_10:03:51] Creating T0 Gateway Tanzu-T0-Gateway ...
+EdgeClusterMember: 0
+EdgeClusterPath: /infra/sites/default/enforcement-points/default/edge-clusters/c58785c9-b5dc-4dde-9715-47ad359343ba
+EdgeClusterNodePath: /infra/sites/default/enforcement-points/default/edge-clusters/c58785c9-b5dc-4dde-9715-47ad359343ba/edge-nodes/0
+[03-10-2022_10:03:55] Creating External T0 Gateway Interface ...
+[03-10-2022_10:03:57] Adding Static Route on T0 Gateway Interface from 0.0.0.0/0 to 192.168.50.1 ...
+[03-10-2022_10:03:59] Disconnecting from NSX-T Manager ...
+[03-10-2022_10:03:59] Connecting to Management vCenter Server vc01.sil.net for enabling Tanzu ...
+[03-10-2022_10:04:01] Creating local devops User in vCenter Server ...
+
+ScriptOutput
+-----------------------------------------------------------------------------------------------------------------------|  User account [devops] created successfully
+|  
+-----------------------------------------------------------------------------------------------------------------------
+
+[03-10-2022_10:04:08] Connecting to NSX-T Manager to get NSX Edge Cluster ID ...
+[03-10-2022_10:05:04] Successfully logged into NSX-T Manager nsxmgr01.lab01.vlab.net  ...
+[03-10-2022_10:05:04] Enabling Workload Management ...
+[03-10-2022_10:05:05] Disconnecting from Management vCenter ...
+[03-10-2022_10:05:05] vSphere with Tanzu using NSX-T Lab Deployment Complete!
+[03-10-2022_10:05:05] StartTime: 03/10/2022 20:47:00
+[03-10-2022_10:05:05]   EndTime: 03/10/2022 22:05:05
+[03-10-2022_10:05:05]  Duration: 78.08 minutes

@@ -2,7 +2,7 @@
 # Website: www.williamlam.com
 
 # vCenter Server used to deploy vSphere with Kubernetes Lab
-$VIServer = "vc01.lab01.vlab.net"
+$VIServer = "vc01.sil.net"
 $VIUsername = "administrator@vsphere.local"
 $VIPassword = "VMware1!"
 
@@ -182,21 +182,21 @@ $random_string = -join ((65..90) + (97..122) | Get-Random -Count 8 | % {[char]$_
 $VAppName = "Nested-vSphere-with-Tanzu-NSX-T-Lab-$random_string"
 
 $preCheck = 0
-$confirmDeployment = 0
-$deployNestedESXiVMs = 0
-$deployVCSA = 0
-$setupNewVC = 0
-$addESXiHostsToVC = 0
-$configureVSANDiskGroup = 0
-$configureVDS = 0
-$clearVSANHealthCheckAlarm = 0
-$setupTanzuStoragePolicy = 0
-$setupTKGContentLibrary = 0
-$deployNSXManager = 0
-$deployNSXEdge = 0
-$postDeployNSXConfig = 0
+$confirmDeployment = 1
+$deployNestedESXiVMs = 1
+$deployVCSA = 1
+$setupNewVC = 1
+$addESXiHostsToVC = 1
+$configureVSANDiskGroup = 1
+$configureVDS = 1
+$clearVSANHealthCheckAlarm = 1
+$setupTanzuStoragePolicy = 1
+$setupTKGContentLibrary = 1
+$deployNSXManager = 1
+$deployNSXEdge = 1
+$postDeployNSXConfig = 1
 $setupTanzu = 1
-$moveVMsIntovApp = 0
+$moveVMsIntovApp = 1
 
 $vcsaSize2MemoryStorageMap = @{
 "tiny"=@{"cpu"="2";"mem"="12";"disk"="415"};
@@ -1592,7 +1592,7 @@ if($setupTanzu -eq 1) {
     Enable-WMCluster @workloadManagementParameters
 
     My-Logger "Disconnecting from Management vCenter ..."
-    #Disconnect-VIServer * -Confirm:$false | Out-Null
+    Disconnect-VIServer * -Confirm:$false | Out-Null
 }
 
 $EndTime = Get-Date
